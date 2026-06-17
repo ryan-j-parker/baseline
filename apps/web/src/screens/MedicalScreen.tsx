@@ -1,0 +1,139 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import medicalData from "@baseline/content/okinawa/modules/medical.json";
+
+type Section = {
+  heading: string;
+  body: string;
+  contacts: { label: string; number: string; note?: string }[];
+  tips: string[];
+};
+
+type MedicalCategory = {
+  id: string;
+  title: string;
+  icon: string;
+  sections: Section[];
+};
+
+export default function MedicalScreen() {
+  const navigate = useNavigate();
+  const [activeId, setActiveId] = useState<string>(medicalData[0].id);
+  const active = medicalData.find((m) => m.id === activeId) as MedicalCategory;
+
+  function handleCall(number: string) {
+    if (!number) return;
+    const digits = number.replace(/[^0-9]/g, "");
+    if (!digits) return;
+    if (digits.startsWith("0")) {
+      window.location.href = `tel:+81${digits.slice(1)}`;
+      return;
+    }
+    window.location.href = `tel:${digits}`;
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-surface)" }}>
+
+      {/* Header */}
+      <div className="px-5 pt-10 pb-4" style={{ backgroundColor: "var(--color-brand)" }}>
+        <button onClick={() => navigate("/")} className="text-blue-200 text-sm mb-2 active:opacity-70">
+          ← Back
+        </button>
+        <h1 className="text-2xl font-bold text-white">Medical</h1>
+        <p className="text-blue-200 text-sm mt-1">Healthcare on and off base</p>
+      </div>
+
+      {/* Tabs */}
+      <div className="flex gap-2 px-4 py-3 overflow-x-auto">
+        {medicalData.map((m) => (
+          <button
+            key={m.id}
+            onClick={() => setActiveId(m.id)}
+            className={`
+              whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors
+              ${activeId === m.id
+                ? "text-white"
+                : "bg-white text-gray-500 border border-gray-200"
+              }
+            `}
+            style={activeId === m.id ? { backgroundColor: "var(--color-brand)" } : {}}
+          >
+            {m.icon} {m.title}
+          </button>
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="px-4 pb-12 flex flex-col gap-6">
+        {active.sections.map((section, si) => (
+          <div key={si} className="flex flex-col gap-3">
+
+            {/* Section heading + body */}
+            <div className="bg-white rounded-2xl p-4 shadow-sm">
+              <p className="font-semibold text-gray-800 mb-2">{section.heading}</p>
+              <p className="text-gray-500 text-sm">{section.body}</p>
+            </div>
+
+            {/* Contacts */}
+            {section.contacts.filter((c) => c.number).length > 0 && (
+              <div className="flex flex-col gap-2">
+                {section.contacts.filter((c) => c.number).map((contact, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleCall(contact.number)}
+                    className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm text-left active:scale-95 transition-transform"
+                  >
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1 pr-3">
+                        <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
+                        {contact.note && (
+                          <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
+                        )}
+                      </div>
+                      <span className="text-sm font-bold shrink-0" style={{ color: "var(--color-brand)" }}>
+                        {contact.number}
+                      </span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Non-callable contacts (websites, chains) */}
+            {section.contacts.filter((c) => !c.number && c.label).length > 0 && (
+              <div className="flex flex-col gap-2">
+                {section.contacts.filter((c) => !c.number).map((contact, i) => (
+                  <div
+                    key={i}
+                    className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm"
+                  >
+                    <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
+                    {contact.note && (
+                      <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Tips */}
+            {section.tips && section.tips.length > 0 && (
+              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
+                <p className="text-xs text-amber-600 uppercase tracking-wide mb-3">Tips</p>
+                <ul className="flex flex-col gap-2">
+                  {section.tips.map((tip, i) => (
+                    <li key={i} className="flex gap-2 items-start">
+                      <span className="text-amber-400 mt-0.5">💡</span>
+                      <span className="text-gray-700 text-sm">{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

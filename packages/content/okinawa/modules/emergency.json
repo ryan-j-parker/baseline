@@ -1,0 +1,106 @@
+[
+  {
+    "category": "emergency",
+    "title": "Emergency Services",
+    "contacts": [
+      {
+        "label": "Police (Japan)",
+        "number": "110",
+        "note": "Japanese national emergency. Works from any phone."
+      },
+      {
+        "label": "Fire & Ambulance (Japan)",
+        "number": "119",
+        "note": "Japanese national emergency. Works from any phone."
+      },
+      {
+        "label": "US Forces Emergency (On-Base)",
+        "number": "911",
+        "note": "Only works on base or from a DSN line."
+      },
+      {
+        "label": "Camp Foster Provost Marshal",
+        "number": "098-970-4213",
+        "note": "24/7 military police for MCAS Foster area."
+      },
+      {
+        "label": "Kadena AB Security Forces",
+        "number": "098-938-1110",
+        "note": "24/7 security for Kadena Air Base."
+      },
+      {
+        "label": "Camp Kinser Provost Marshal",
+        "number": "098-970-4213",
+        "note": "Military police for Camp Kinser."
+      }
+    ]
+  },
+  {
+    "category": "medical",
+    "title": "Medical Emergencies",
+    "contacts": [
+      {
+        "label": "Naval Hospital Okinawa",
+        "number": "098-960-4800",
+        "note": "Main US military hospital. Camp Foster, Building 2966."
+      },
+      {
+        "label": "Naval Hospital Nurse Advice Line",
+        "number": "098-960-4820",
+        "note": "24/7 nurse triage line. Call before going to the ER if possible."
+      },
+      {
+        "label": "Okinawa Prefectural Hospital (Japanese ER)",
+        "number": "098-853-3134",
+        "note": "Largest local hospital. Limited English — bring a translator if possible."
+      }
+    ]
+  },
+  {
+    "category": "typhoon",
+    "title": "Typhoon & Disasters",
+    "contacts": [
+      {
+        "label": "American Forces Network (AFN)",
+        "number": "Radio: AM 648",
+        "note": "Official USFJ emergency broadcasts during typhoons and disasters."
+      },
+      {
+        "label": "USFJ Typhoon Condition Hotline",
+        "number": "098-970-4105",
+        "note": "Records current TCCOR (Typhoon Condition of Readiness) status."
+      },
+      {
+        "label": "Japan Meteorological Agency",
+        "number": "www.jma.go.jp/en",
+        "note": "Official typhoon tracking in English."
+      }
+    ]
+  },
+  {
+    "category": "family",
+    "title": "Family & Support",
+    "contacts": [
+      {
+        "label": "Military OneSource",
+        "number": "1-800-342-9647",
+        "note": "24/7 support for military families. Counseling, referrals, crisis help."
+      },
+      {
+        "label": "Fleet & Family Support Center",
+        "number": "098-970-4904",
+        "note": "Camp Foster. Non-emergency family support, relocation help."
+      },
+      {
+        "label": "Domestic Abuse Victim Advocate",
+        "number": "098-960-4868",
+        "note": "24/7 confidential support. Naval Hospital Okinawa."
+      },
+      {
+        "label": "Suicide & Crisis Lifeline",
+        "number": "988",
+        "note": "Press 1 for veterans and service members."
+      }
+    ]
+  }
+]

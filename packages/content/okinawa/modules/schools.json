@@ -1,0 +1,219 @@
+[
+  {
+    "id": "dodea",
+    "title": "DoDEA",
+    "icon": "🏫",
+    "sections": [
+      {
+        "heading": "DoDEA Pacific Schools in Okinawa",
+        "body": "Department of Defense Education Activity (DoDEA) operates schools on base for military-connected students K-12. These are fully accredited US schools — same curriculum, sports, and activities as stateside.",
+        "contacts": [
+          {
+            "label": "DoDEA Pacific - Okinawa District",
+            "number": "098-970-7700",
+            "note": "Main DoDEA district office for Okinawa. Enrollment and general questions."
+          },
+          {
+            "label": "DoDEA Okinawa Website",
+            "number": "https://www.dodea.edu/pacific/pac-south",
+            "note": "School listings, calendars, enrollment forms, and contacts."
+          }
+        ],
+        "steps": [
+          "Contact the DoDEA district office or visit dodea.edu to find your assigned school based on your housing area.",
+          "Gather enrollment documents: birth certificate, immunization records, previous school records, and sponsor's orders.",
+          "Submit enrollment paperwork at the school office — walk-ins are accepted but call ahead.",
+          "Your child will be placed based on grade level and assessed if transferring mid-year.",
+          "School buses run from most housing areas — confirm routes with the school."
+        ],
+        "tips": [
+          "Enroll as soon as possible — some programs (special education, gifted) have waitlists.",
+          "DoDEA transcripts transfer seamlessly back to US schools when you PCS.",
+          "School liaisons on base can help with the enrollment process — contact your installation's School Liaison Officer (SLO).",
+          "DoDEA follows a similar academic calendar to US schools with summers off."
+        ]
+      },
+      {
+        "heading": "DoDEA Schools by Area",
+        "body": "Schools are assigned based on your housing area. Contact the district office to confirm your assigned school.",
+        "contacts": [
+          {
+            "label": "Amelia Earhart Intermediate (Kadena)",
+            "number": "098-938-7100",
+            "note": "Grades 6-8. Kadena Air Base."
+          },
+          {
+            "label": "Bob Hope Primary School (Kadena)",
+            "number": "098-938-7200",
+            "note": "Grades K-3. Kadena Air Base."
+          },
+          {
+            "label": "Kadena Elementary School",
+            "number": "098-938-7300",
+            "note": "Grades 4-5. Kadena Air Base."
+          },
+          {
+            "label": "Kadena High School",
+            "number": "098-938-7400",
+            "note": "Grades 9-12. Kadena Air Base."
+          },
+          {
+            "label": "Zukeran Elementary (Camp Foster)",
+            "number": "098-970-7800",
+            "note": "Grades K-5. Camp Foster."
+          },
+          {
+            "label": "Courtney Elementary (Camp Courtney)",
+            "number": "098-970-7900",
+            "note": "Grades K-5. Camp Courtney."
+          },
+          {
+            "label": "Okinawa Christian Academy (OCA)",
+            "number": "098-938-3337",
+            "note": "Private Christian school. Accepts SOFA-status families. Grades K-12."
+          }
+        ],
+        "steps": [],
+        "tips": []
+      }
+    ]
+  },
+  {
+    "id": "slo",
+    "title": "School Liaison",
+    "icon": "🤝",
+    "sections": [
+      {
+        "heading": "School Liaison Officers (SLO)",
+        "body": "Every installation has a School Liaison Officer whose sole job is to help military families navigate the school system. They are one of the most underutilized resources on base — use them.",
+        "contacts": [
+          {
+            "label": "Kadena AB School Liaison",
+            "number": "098-938-7469",
+            "note": "Serves Kadena Air Base families."
+          },
+          {
+            "label": "Camp Foster School Liaison",
+            "number": "098-970-4538",
+            "note": "Serves Marine Corps installations."
+          }
+        ],
+        "steps": [
+          "Contact your installation's SLO as soon as you arrive.",
+          "The SLO can help with enrollment, school selection, and special education transitions.",
+          "If your child has an IEP or 504 plan, bring copies — the SLO will help transfer services.",
+          "SLOs can advocate on your behalf if you encounter issues with enrollment or placement."
+        ],
+        "tips": [
+          "SLO services are free and available to all military families.",
+          "If your child has special needs, contact the SLO before you PCS — early coordination is critical.",
+          "SLOs can also help with college prep and transcript requests for high schoolers."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "special-education",
+    "title": "Special Education",
+    "icon": "🌟",
+    "sections": [
+      {
+        "heading": "Special Education & IEP Services",
+        "body": "DoDEA provides special education services including IEP and 504 plans. Services transfer from stateside schools but re-evaluation may be required. Start this process early.",
+        "contacts": [
+          {
+            "label": "DoDEA Special Education",
+            "number": "098-970-7700",
+            "note": "Contact the district office to begin IEP transfer and evaluation process."
+          },
+          {
+            "label": "Exceptional Family Member Program (EFMP)",
+            "number": "098-970-4538",
+            "note": "EFMP coordinates support for families with special needs members. Enrollment is mandatory for EFMP families."
+          }
+        ],
+        "steps": [
+          "Bring all current IEP or 504 documents with you — do not rely on records being transferred.",
+          "Contact the DoDEA district office before you arrive to begin the transition process.",
+          "An IEP meeting will be scheduled within 30 days of enrollment.",
+          "Services may look different than stateside — discuss options with the IEP team.",
+          "EFMP enrollment is mandatory and ensures support services follow your family."
+        ],
+        "tips": [
+          "The EFMP coordinator can be a powerful advocate — build that relationship early.",
+          "Some specialized therapies may not be available on base — ask about off-base referrals.",
+          "Naval Hospital Okinawa has pediatric therapy services for eligible dependents.",
+          "Document everything in writing — email confirmations of all IEP discussions."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "homeschool",
+    "title": "Homeschool",
+    "icon": "🏠",
+    "sections": [
+      {
+        "heading": "Homeschooling in Okinawa",
+        "body": "Homeschooling is permitted for SOFA-status families in Okinawa. You follow your home state's homeschool laws, not Japanese law. An active homeschool community exists on island.",
+        "contacts": [
+          {
+            "label": "Okinawa Homeschool Association",
+            "number": "",
+            "note": "Search Facebook for active Okinawa homeschool groups — very active community."
+          },
+          {
+            "label": "Camp Foster School Liaison",
+            "number": "098-970-4538",
+            "note": "Can advise on base facility access for homeschool families."
+          }
+        ],
+        "steps": [
+          "Confirm your home state's homeschool requirements — you are subject to your state's laws.",
+          "Register with your home state if required.",
+          "Connect with the Okinawa homeschool community on Facebook — co-ops and group classes are common.",
+          "Homeschool families may have access to some DoDEA extracurricular activities — confirm with the SLO.",
+          "Use base library resources — Kadena and Foster libraries have extensive homeschool sections."
+        ],
+        "tips": [
+          "The Okinawa homeschool community is tight-knit and welcoming to new families.",
+          "Co-op classes covering science labs, PE, and electives are widely available.",
+          "Base facilities like the gym, pool, and library are generally accessible to homeschool families.",
+          "Document your curriculum and keep records — you'll need them when you PCS back stateside."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japanese-schools",
+    "title": "Japanese Schools",
+    "icon": "🗾",
+    "sections": [
+      {
+        "heading": "Enrolling in Japanese Local Schools",
+        "body": "Some SOFA families choose to enroll their children in Japanese public or private schools for the cultural and language experience. This is permitted but requires coordination with your village office.",
+        "contacts": [
+          {
+            "label": "Your Village Municipal Office",
+            "number": "",
+            "note": "Contact your village's education department to begin enrollment. Bring your residence card."
+          }
+        ],
+        "steps": [
+          "Contact your village municipal office (役場) education department.",
+          "Bring your residence card, passport, and sponsor's orders.",
+          "Your child will be assigned to the local school based on your address.",
+          "Japanese schools do not provide English instruction — prepare your child for full immersion.",
+          "School year runs April to March in Japan — mid-year enrollment is possible but disruptive."
+        ],
+        "tips": [
+          "Japanese schools require uniforms — budget for this upfront.",
+          "The experience can be incredibly valuable for children — many families consider it a highlight of their tour.",
+          "Connect with other SOFA families who have done this — the Facebook community has many who can advise.",
+          "Lunch (給食) is provided at Japanese public schools and is included in fees.",
+          "The Japanese school year starts in April — if possible, time your enrollment to the start of a semester."
+        ]
+      }
+    ]
+  }
+]

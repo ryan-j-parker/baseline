@@ -1,0 +1,142 @@
+[
+  {
+    "id": "electricity",
+    "title": "Electricity",
+    "icon": "💡",
+    "provider": "Okinawa Electric Power Company (OEPC)",
+    "summary": "Set up before or immediately after moving in. Can take 1-2 business days to activate.",
+    "contacts": [
+      {
+        "label": "OEPC English Hotline",
+        "number": "098-853-2110",
+        "note": "English-speaking support available. Mon–Fri 9AM–5PM."
+      }
+    ],
+    "steps": [
+      "Call the OEPC English hotline or visit an OEPC office in person.",
+      "Provide your new address, move-in date, and passport or ID.",
+      "Request service start — give at least 1 business day notice.",
+      "A technician may need access to your breaker box. Be home if requested.",
+      "Pay your bill monthly at a convenience store (7-Eleven, Family Mart, Lawson) using the slip mailed to you, or set up auto-pay."
+    ],
+    "tips": [
+      "Bring your residence card (在留カード) or passport to any in-person visit.",
+      "Convenience store bill payment is the easiest option for most families.",
+      "If your power won't turn on after setup, check the breaker box first — it may just be tripped."
+    ]
+  },
+  {
+    "id": "water",
+    "title": "Water",
+    "icon": "💧",
+    "provider": "Okinawa Prefecture Waterworks Bureau",
+    "summary": "Water is managed by the prefecture. Setup is straightforward but must be done in person or by phone.",
+    "contacts": [
+      {
+        "label": "Waterworks Bureau",
+        "number": "098-879-3710",
+        "note": "Limited English. Have your address ready. Mon–Fri 8AM–5PM."
+      }
+    ],
+    "steps": [
+      "Call the Waterworks Bureau to register your address and request service start.",
+      "Provide your move-in date and new address.",
+      "Water is usually active within 1 business day.",
+      "Bills are mailed bi-monthly and can be paid at any convenience store."
+    ],
+    "tips": [
+      "If you're in base housing, water may already be handled — confirm with your housing office.",
+      "Off-base renters almost always need to set this up themselves.",
+      "Water quality in Okinawa is safe to drink from the tap."
+    ]
+  },
+  {
+    "id": "gas",
+    "title": "Gas",
+    "icon": "🔥",
+    "provider": "Propane (LP Gas) — varies by building",
+    "summary": "Most Okinawa homes use propane tanks, not city gas. Your landlord or property manager typically handles setup.",
+    "contacts": [
+      {
+        "label": "Ask your landlord or realtor",
+        "number": "",
+        "note": "Gas provider varies by property. Your landlord will connect you with the right company."
+      }
+    ],
+    "steps": [
+      "Ask your landlord or property manager which LP gas company services your building.",
+      "The gas company will schedule a setup appointment — you must be present.",
+      "A technician will inspect lines, connect the tank, and show you the shutoff valve.",
+      "Never attempt to connect or adjust gas lines yourself."
+    ],
+    "tips": [
+      "Some apartments include gas in the rent — confirm with your landlord.",
+      "If you smell gas, leave immediately and call 119.",
+      "Keep the gas company's number saved — you'll need it if service is interrupted."
+    ]
+  },
+  {
+    "id": "internet",
+    "title": "Internet",
+    "icon": "📶",
+    "provider": "Multiple providers — Docomo Hikari, SoftBank, au Hikari",
+    "summary": "Home internet setup can take 2–4 weeks for a technician visit. Plan ahead.",
+    "contacts": [
+      {
+        "label": "Docomo English Support",
+        "number": "0120-005-250",
+        "note": "Toll-free. English support available."
+      },
+      {
+        "label": "SoftBank English Support",
+        "number": "0800-1111-820",
+        "note": "Toll-free. English support available."
+      }
+    ],
+    "steps": [
+      "Choose a provider — Docomo Hikari and SoftBank are most common for English support.",
+      "Call or visit a carrier store to sign up. Bring your passport and residence card.",
+      "Schedule a technician installation visit — expect 2–4 weeks wait time.",
+      "In the meantime, use your phone as a hotspot or purchase a pocket WiFi device.",
+      "Pocket WiFi is available at the airport or at carrier stores and works immediately."
+    ],
+    "tips": [
+      "Start this process on day one — the wait time catches many families off guard.",
+      "Pocket WiFi from IIJmio or Rakuten Mobile is a good stopgap.",
+      "Some bases have a waiting list for on-base internet — check with your housing office.",
+      "Many Okinawa Family Mart and 7-Eleven locations have free WiFi as a stopgap."
+    ]
+  },
+  {
+    "id": "phone",
+    "title": "Phone & SIM",
+    "icon": "📱",
+    "provider": "Docomo, SoftBank, au, Rakuten Mobile",
+    "summary": "Get a local SIM or phone plan as soon as possible. Your US plan will have expensive roaming charges.",
+    "contacts": [
+      {
+        "label": "Docomo English Support",
+        "number": "0120-005-250",
+        "note": "Toll-free. English support available."
+      },
+      {
+        "label": "Rakuten Mobile",
+        "number": "0800-600-0000",
+        "note": "Cheapest option. Unlimited data plan available."
+      }
+    ],
+    "steps": [
+      "Visit a carrier store with your passport and residence card (在留カード).",
+      "Choose a plan — Rakuten Mobile is cheapest, Docomo has best coverage island-wide.",
+      "Request an English-speaking staff member — most major stores have at least one.",
+      "You can keep your US number active on a secondary eSIM if your phone supports it.",
+      "SIM-only plans are available if you brought an unlocked phone from the US."
+    ],
+    "tips": [
+      "Docomo has the best rural and mountain coverage in Okinawa.",
+      "Rakuten Mobile is around ¥3,000/month unlimited — hard to beat.",
+      "Make sure your US phone is unlocked before you leave — AT&T and Verizon lock by default.",
+      "The AAFES on base sometimes carries SIM cards — check there first."
+    ]
+  }
+]

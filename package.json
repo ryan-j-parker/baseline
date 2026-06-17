@@ -1,0 +1,6 @@
+{
+  "name": "baseline",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": { "node": ">=20", "pnpm": ">=9" }
+}

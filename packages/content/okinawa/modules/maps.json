@@ -1,0 +1,162 @@
+[
+  {
+    "id": "bases",
+    "title": "Bases",
+    "icon": "🪖",
+    "locations": [
+      {
+        "label": "Camp Foster (MCAS)",
+        "note": "Main Marine Corps hub. Commissary, hospital, PX, legal office.",
+        "wazeUrl": "https://waze.com/ul?q=Camp+Foster+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Camp+Foster+Okinawa+Japan"
+      },
+      {
+        "label": "Kadena Air Base",
+        "note": "Largest US Air Force base in Asia. Main gate off Route 58.",
+        "wazeUrl": "https://waze.com/ul?q=Kadena+Air+Base+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Kadena+Air+Base+Okinawa+Japan"
+      },
+      {
+        "label": "Camp Kinser",
+        "note": "Marine Corps logistics base. Housing and support facilities.",
+        "wazeUrl": "https://waze.com/ul?q=Camp+Kinser+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Camp+Kinser+Okinawa+Japan"
+      },
+      {
+        "label": "Camp Courtney",
+        "note": "III MEF headquarters. Northern housing area.",
+        "wazeUrl": "https://waze.com/ul?q=Camp+Courtney+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Camp+Courtney+Okinawa+Japan"
+      },
+      {
+        "label": "Camp Hansen",
+        "note": "Marine training base in central Okinawa.",
+        "wazeUrl": "https://waze.com/ul?q=Camp+Hansen+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Camp+Hansen+Okinawa+Japan"
+      },
+      {
+        "label": "Camp Schwab",
+        "note": "Northern training base near Nago.",
+        "wazeUrl": "https://waze.com/ul?q=Camp+Schwab+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Camp+Schwab+Okinawa+Japan"
+      },
+      {
+        "label": "Torii Station",
+        "note": "Army installation. Yomitan area.",
+        "wazeUrl": "https://waze.com/ul?q=Torii+Station+Yomitan+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Torii+Station+Yomitan+Okinawa+Japan"
+      }
+    ]
+  },
+  {
+    "id": "medical",
+    "title": "Medical",
+    "icon": "🏥",
+    "locations": [
+      {
+        "label": "Naval Hospital Okinawa",
+        "note": "Main US military hospital. Camp Foster Building 2966.",
+        "wazeUrl": "https://waze.com/ul?q=Naval+Hospital+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Naval+Hospital+Okinawa+Japan"
+      },
+      {
+        "label": "Okinawa Prefectural Nanbu Medical Center",
+        "note": "Largest Japanese hospital in southern Okinawa.",
+        "wazeUrl": "https://waze.com/ul?q=Okinawa+Prefectural+Nanbu+Medical+Center+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Okinawa+Prefectural+Nanbu+Medical+Center"
+      },
+      {
+        "label": "Chubu Tokushukai Hospital",
+        "note": "Central Okinawa. Closest major hospital for Okinawa City and Uruma families.",
+        "wazeUrl": "https://waze.com/ul?q=Chubu+Tokushukai+Hospital+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Chubu+Tokushukai+Hospital+Okinawa+Japan"
+      }
+    ]
+  },
+  {
+    "id": "shopping",
+    "title": "Shopping",
+    "icon": "🛒",
+    "locations": [
+      {
+        "label": "Kadena Commissary",
+        "note": "Main on-base grocery store.",
+        "wazeUrl": "https://waze.com/ul?q=Kadena+Commissary+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Kadena+Commissary+Okinawa+Japan"
+      },
+      {
+        "label": "Costco Japan (Chatan)",
+        "note": "Membership warehouse. US brands and bulk quantities.",
+        "wazeUrl": "https://waze.com/ul?q=Costco+Chatan+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Costco+Chatan+Okinawa+Japan"
+      },
+      {
+        "label": "Don Quijote Chatan",
+        "note": "24-hour discount store. Popular with military families.",
+        "wazeUrl": "https://waze.com/ul?q=Don+Quijote+Chatan+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Don+Quijote+Chatan+Okinawa+Japan"
+      },
+      {
+        "label": "San-A Urasoe Main",
+        "note": "Large San-A supermarket. Good for everyday Japanese grocery shopping.",
+        "wazeUrl": "https://waze.com/ul?q=San-A+Urasoe+Main+City+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=San-A+Urasoe+Main+City+Okinawa+Japan"
+      },
+      {
+        "label": "Makishi Public Market (Naha)",
+        "note": "Iconic local market. Fresh fish, produce, local specialties.",
+        "wazeUrl": "https://waze.com/ul?q=Makishi+Public+Market+Naha+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Makishi+Public+Market+Naha+Okinawa+Japan"
+      }
+    ]
+  },
+  {
+    "id": "explore",
+    "title": "Explore",
+    "icon": "🌺",
+    "locations": [
+      {
+        "label": "Shuri Castle (首里城)",
+        "note": "UNESCO World Heritage Site. Historic Ryukyuan castle in Naha.",
+        "wazeUrl": "https://waze.com/ul?q=Shuri+Castle+Naha+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Shuri+Castle+Naha+Okinawa+Japan"
+      },
+      {
+        "label": "Churaumi Aquarium",
+        "note": "World-class aquarium in northern Okinawa. Great for families with kids.",
+        "wazeUrl": "https://waze.com/ul?q=Okinawa+Churaumi+Aquarium+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Okinawa+Churaumi+Aquarium+Japan"
+      },
+      {
+        "label": "American Village (Chatan)",
+        "note": "Shopping, restaurants, and entertainment. Very popular with military families.",
+        "wazeUrl": "https://waze.com/ul?q=American+Village+Chatan+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=American+Village+Chatan+Okinawa+Japan"
+      },
+      {
+        "label": "Cape Manzamo",
+        "note": "Stunning coastal cliffs. One of Okinawa's most iconic viewpoints.",
+        "wazeUrl": "https://waze.com/ul?q=Cape+Manzamo+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Cape+Manzamo+Okinawa+Japan"
+      },
+      {
+        "label": "Kokusai Street (国際通り)",
+        "note": "Naha's main shopping and dining street. Great for souvenirs and local food.",
+        "wazeUrl": "https://waze.com/ul?q=Kokusai+Street+Naha+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Kokusai+Street+Naha+Okinawa+Japan"
+      },
+      {
+        "label": "Katsuren Castle Ruins",
+        "note": "UNESCO World Heritage Site. Ancient Ryukyuan castle near Uruma.",
+        "wazeUrl": "https://waze.com/ul?q=Katsuren+Castle+Ruins+Uruma+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Katsuren+Castle+Ruins+Uruma+Okinawa+Japan"
+      },
+      {
+        "label": "Emerald Beach",
+        "note": "Free public beach near Churaumi Aquarium. Calm water, great for families.",
+        "wazeUrl": "https://waze.com/ul?q=Emerald+Beach+Okinawa+Japan&navigate=yes",
+        "googleUrl": "https://maps.google.com/?q=Emerald+Beach+Okinawa+Japan"
+      }
+    ]
+  }
+]

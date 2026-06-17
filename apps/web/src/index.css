@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1B4F8A;
+  --color-accent: #E8612C;
+  --color-surface: #F5F5F0;
+  --color-danger: #CC2936;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-surface);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

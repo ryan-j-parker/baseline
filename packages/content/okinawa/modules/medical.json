@@ -1,0 +1,206 @@
+[
+  {
+    "id": "hospital",
+    "title": "Hospital",
+    "icon": "🏥",
+    "sections": [
+      {
+        "heading": "Naval Hospital Okinawa",
+        "body": "The primary US military hospital on island. Located on Camp Foster (Building 2966). Serves all active duty, dependents, and eligible retirees.",
+        "contacts": [
+          {
+            "label": "Appointments",
+            "number": "098-960-4820",
+            "note": "Call to schedule. Have your sponsor's SSN and DOD ID ready."
+          },
+          {
+            "label": "Nurse Advice Line",
+            "number": "098-960-4820",
+            "note": "24/7. Call before going to the ER if your situation is non-critical."
+          },
+          {
+            "label": "Emergency Room",
+            "number": "098-960-4800",
+            "note": "On-base ER. For life-threatening emergencies off-base, call 119."
+          }
+        ],
+        "tips": [
+          "Bring your DOD ID and sponsor's ID to every appointment.",
+          "The ER wait times are often long — use the Nurse Advice Line first if possible.",
+          "Referrals to off-base Japanese specialists are common and covered by TRICARE."
+        ]
+      },
+      {
+        "heading": "Japanese Hospitals (Off-Base)",
+        "body": "Japanese hospitals are high quality but English support is limited. Use for emergencies when on-base care is not accessible.",
+        "contacts": [
+          {
+            "label": "Okinawa Prefectural Nanbu Medical Center",
+            "number": "098-888-0123",
+            "note": "Largest hospital in southern Okinawa. Limited English."
+          },
+          {
+            "label": "Chubu Tokushukai Hospital",
+            "number": "098-973-4111",
+            "note": "Central Okinawa. Closest major hospital for Okinawa City / Uruma families."
+          }
+        ],
+        "tips": [
+          "Download the Google Translate app and enable camera translation before you need it.",
+          "Bring your insurance card and passport to any Japanese hospital visit.",
+          "TRICARE may cover off-base emergency care — keep all receipts for reimbursement."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dental",
+    "title": "Dental",
+    "icon": "🦷",
+    "sections": [
+      {
+        "heading": "On-Base Dental Clinics",
+        "body": "Military dental clinics are available on most bases. Active duty are seen routinely. Dependents may have limited access — check your TRICARE dental plan.",
+        "contacts": [
+          {
+            "label": "Camp Foster Dental Clinic",
+            "number": "098-970-4820",
+            "note": "Primary dental clinic for Foster area. Active duty priority."
+          },
+          {
+            "label": "Kadena Dental Clinic",
+            "number": "098-938-5100",
+            "note": "Serves Kadena AB personnel and dependents."
+          }
+        ],
+        "tips": [
+          "Dependents often need to use TRICARE Dental Program (TDP) for off-base care.",
+          "Schedule a new patient exam as soon as possible — wait times can be several weeks.",
+          "Orthodontics for dependents is typically off-base and covered under TDP."
+        ]
+      },
+      {
+        "heading": "Off-Base Dental (English-Friendly)",
+        "body": "Several off-base clinics near military housing areas have English-speaking staff and experience with TRICARE.",
+        "contacts": [
+          {
+            "label": "Mihama Dental Clinic",
+            "number": "098-936-5118",
+            "note": "Chatan area. English-speaking staff. Popular with military families."
+          }
+        ],
+        "tips": [
+          "Always call ahead to confirm English availability and TRICARE acceptance.",
+          "Keep your TRICARE dental ID card with you.",
+          "Off-base cleanings are affordable even without insurance — typically ¥3,000–¥5,000."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pharmacy",
+    "title": "Pharmacy",
+    "icon": "💊",
+    "sections": [
+      {
+        "heading": "On-Base Pharmacy",
+        "body": "The Naval Hospital pharmacy is the primary option for active duty and dependents. Prescriptions through military providers are typically free.",
+        "contacts": [
+          {
+            "label": "Naval Hospital Pharmacy",
+            "number": "098-960-4800",
+            "note": "Located inside Naval Hospital on Camp Foster."
+          }
+        ],
+        "tips": [
+          "Refill prescriptions before leaving the US — getting stateside medications can take time.",
+          "Some medications available over the counter in the US require a prescription in Japan.",
+          "The hospital pharmacy can be busy — use the Express Pharmacy line for refills."
+        ]
+      },
+      {
+        "heading": "Japanese Pharmacies (Yakkyoku)",
+        "body": "Japanese pharmacies (薬局) are widely available and well-stocked. Most common brands are available under different names.",
+        "contacts": [
+          {
+            "label": "Matsumoto Kiyoshi",
+            "number": "",
+            "note": "Largest pharmacy chain in Japan. Locations throughout Okinawa."
+          },
+          {
+            "label": "Sun Drug",
+            "number": "",
+            "note": "Common chain near military housing areas."
+          }
+        ],
+        "tips": [
+          "Google Translate camera mode works well for reading Japanese medication labels.",
+          "Japanese equivalents exist for most common OTC medications — ask the pharmacist.",
+          "Bring a list of any medications you take by their generic name, not brand name."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mental-health",
+    "title": "Mental Health",
+    "icon": "🧠",
+    "sections": [
+      {
+        "heading": "On-Base Mental Health Services",
+        "body": "Mental health support is available on base and confidential in most cases. Seeking help is encouraged and supported.",
+        "contacts": [
+          {
+            "label": "Naval Hospital Behavioral Health",
+            "number": "098-960-4820",
+            "note": "Schedule through the main appointment line."
+          },
+          {
+            "label": "Military OneSource",
+            "number": "1-800-342-9647",
+            "note": "24/7. Free, confidential counseling by phone. Up to 12 sessions."
+          },
+          {
+            "label": "Suicide & Crisis Lifeline",
+            "number": "988",
+            "note": "Press 1 for veterans and service members. Available 24/7."
+          }
+        ],
+        "tips": [
+          "Military OneSource counseling is completely confidential and does not go in your record.",
+          "PCS moves are one of the highest-stress events a military family can experience — it's okay to ask for help.",
+          "Fleet & Family Support Center also offers free counseling and adjustment support."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tricare",
+    "title": "TRICARE",
+    "icon": "📋",
+    "sections": [
+      {
+        "heading": "TRICARE Overseas",
+        "body": "While stationed in Okinawa you are covered under TRICARE Overseas Program (TOP). This works differently from stateside TRICARE.",
+        "contacts": [
+          {
+            "label": "TRICARE Overseas",
+            "number": "1-888-777-8343",
+            "note": "Toll-free from US. For Japan, call collect: +1-608-373-1078."
+          },
+          {
+            "label": "TRICARE Online",
+            "number": "www.tricare.mil",
+            "note": "Manage appointments, referrals, and claims online."
+          }
+        ],
+        "tips": [
+          "Register all family members in DEERS before you leave the US.",
+          "Keep copies of all off-base medical receipts — submit for reimbursement through TRICARE Overseas.",
+          "Pre-authorization is required for most off-base specialist visits.",
+          "Your primary care manager (PCM) is assigned at Naval Hospital — update this as soon as you arrive."
+        ]
+      }
+    ]
+  }
+]

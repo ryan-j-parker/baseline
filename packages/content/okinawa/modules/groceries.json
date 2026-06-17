@@ -1,0 +1,224 @@
+[
+  {
+    "id": "on-base",
+    "title": "On Base",
+    "icon": "🏪",
+    "sections": [
+      {
+        "heading": "Commissary",
+        "body": "The base commissary is a US military grocery store carrying American brands at reduced prices. Stock up here for familiar staples, American snacks, and US brands not available off base.",
+        "contacts": [
+          {
+            "label": "Kadena Commissary",
+            "number": "098-938-1550",
+            "note": "Main commissary for Kadena AB. Largest selection on island."
+          },
+          {
+            "label": "Camp Foster Commissary",
+            "number": "098-970-4221",
+            "note": "Serves Marine Corps installation families."
+          }
+        ],
+        "steps": [
+          "Bring your military ID — commissary access requires SOFA status.",
+          "A 5% surcharge is added to all purchases (covers operating costs — no other taxes).",
+          "Bag your own groceries or tip the baggers — they work for tips only.",
+          "The commissary restocks frequently but popular American items can sell out — shop early in the week.",
+          "Check the commissary app (CommissaryLink) for weekly sales and coupons."
+        ],
+        "tips": [
+          "Meat, dairy, and produce are significantly cheaper at the commissary than off base.",
+          "The commissary does not carry everything — plan to supplement with Japanese stores.",
+          "Holiday weeks (Thanksgiving, Christmas) get very busy — shop early.",
+          "Commissary hours vary — check the installation website for current hours."
+        ]
+      },
+      {
+        "heading": "AAFES / Exchange Food Court",
+        "body": "The Exchange (PX/BX) carries some grocery items, snacks, and household goods in addition to its retail offerings. The food court has familiar US fast food options.",
+        "contacts": [
+          {
+            "label": "Kadena Exchange",
+            "number": "098-938-2521",
+            "note": "Main Exchange at Kadena AB."
+          }
+        ],
+        "steps": [],
+        "tips": [
+          "The Exchange carries a limited grocery selection — good for quick pickups between commissary trips.",
+          "Tax-free shopping at the Exchange is a significant benefit — take advantage of it.",
+          "The food court is great for familiar comfort food during the adjustment period."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japanese-supermarkets",
+    "title": "Japanese Stores",
+    "icon": "🛒",
+    "sections": [
+      {
+        "heading": "Japanese Supermarkets",
+        "body": "Japanese supermarkets are excellent — fresh, clean, and well-stocked. Prices are reasonable and the produce and seafood quality is outstanding. Most families shop both on base and off.",
+        "contacts": [
+          {
+            "label": "San-A (サンエー)",
+            "number": "",
+            "note": "Okinawa's largest supermarket chain. Multiple locations island-wide. Best for everyday shopping."
+          },
+          {
+            "label": "Ryubo (リウボウ)",
+            "number": "",
+            "note": "Mid-range Japanese supermarket. Good selection and frequent sales."
+          },
+          {
+            "label": "MaxValu (マックスバリュ)",
+            "number": "",
+            "note": "Larger format store. Good for bulk items and household goods."
+          },
+          {
+            "label": "Nishimatsuya (西松屋)",
+            "number": "",
+            "note": "Baby and children's goods at very low prices. Essential for families with young kids."
+          }
+        ],
+        "steps": [],
+        "tips": [
+          "Most Japanese supermarkets do not bag your groceries — bag them yourself at the packing counter.",
+          "Bring your own reusable bags — plastic bags cost extra at most stores.",
+          "Google Translate camera mode works great for reading Japanese food labels.",
+          "Fresh fish and seafood at Japanese supermarkets is exceptional quality and very affordable.",
+          "Sashimi-grade fish is widely available and safe — a highlight for many families."
+        ]
+      },
+      {
+        "heading": "Discount Stores",
+        "body": "Several discount chains offer groceries alongside household goods at very competitive prices.",
+        "contacts": [
+          {
+            "label": "Don Quijote (ドン・キホーテ)",
+            "number": "",
+            "note": "24-hour discount store. Groceries, household goods, electronics, and more. Chatan location popular with military families."
+          },
+          {
+            "label": "Costco Japan",
+            "number": "098-930-0787",
+            "note": "Membership warehouse store. Located in Chatan. US-style bulk buying. Membership required."
+          }
+        ],
+        "steps": [],
+        "tips": [
+          "Don Quijote is open 24 hours — useful when you need something late at night.",
+          "Don Quijote frequently has sales on snacks, drinks, and household items.",
+          "Costco Japan requires a membership — bring your US Costco card or sign up for a Japanese membership, which costs around ¥4,840/year.",
+          "Costco Japan carries many US brands and bulk quantities — popular with large families."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "convenience-stores",
+    "title": "Convenience Stores",
+    "icon": "🏬",
+    "sections": [
+      {
+        "heading": "Japanese Convenience Stores (コンビニ)",
+        "body": "Japanese convenience stores are nothing like their US counterparts. They are clean, well-stocked, and sell genuinely good food. You will use them constantly.",
+        "contacts": [
+          {
+            "label": "7-Eleven (セブンイレブン)",
+            "number": "",
+            "note": "Most common chain. ATMs accept foreign cards. Hot food, fresh meals, bill payment."
+          },
+          {
+            "label": "Family Mart (ファミリーマート)",
+            "number": "",
+            "note": "Island-wide locations. Great onigiri and hot foods. Free WiFi."
+          },
+          {
+            "label": "Lawson (ローソン)",
+            "number": "",
+            "note": "Known for baked goods and desserts. Also has bill payment services."
+          }
+        ],
+        "steps": [],
+        "tips": [
+          "Onigiri (rice balls) are cheap, filling, and delicious — a staple for many military families.",
+          "Hot foods at the counter (fried chicken, steamed buns) are freshly made and very good.",
+          "7-Eleven ATMs reliably accept US debit and credit cards — use them to get yen.",
+          "You can pay utility bills, road tax, and other bills at any convenience store.",
+          "Convenience store desserts and pastries are surprisingly high quality.",
+          "Most convenience stores have free WiFi — useful before your home internet is set up."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "farmers-markets",
+    "title": "Local Markets",
+    "icon": "🥬",
+    "sections": [
+      {
+        "heading": "Farmers Markets & Fresh Produce",
+        "body": "Okinawa has excellent local produce markets with fresh, affordable vegetables, fruits, and local specialties. A great way to experience local food culture.",
+        "contacts": [
+          {
+            "label": "Makishi Public Market (牧志公設市場)",
+            "number": "",
+            "note": "Iconic Naha market. Fresh fish, meat, local produce. Bring upstairs to have it cooked. A must-visit."
+          },
+          {
+            "label": "JA Okinawa Farm Markets (ファーマーズマーケット)",
+            "number": "",
+            "note": "Agricultural cooperative markets. Incredibly fresh local produce at low prices. Multiple island locations."
+          }
+        ],
+        "steps": [],
+        "tips": [
+          "JA Farmers Markets open early and popular items sell out — go in the morning.",
+          "Local Okinawan vegetables like goya (bitter melon) and purple sweet potato are worth trying.",
+          "The Makishi market is a great experience even if you are just browsing.",
+          "Prices at farmers markets are often lower than supermarkets for local produce."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tips",
+    "title": "Shopping Tips",
+    "icon": "💡",
+    "sections": [
+      {
+        "heading": "Money & Payment",
+        "body": "Japan is still heavily cash-based. Always carry yen. Cards are increasingly accepted but smaller stores and markets often require cash.",
+        "contacts": [],
+        "steps": [
+          "Get yen from a 7-Eleven ATM — reliably accepts US cards with low fees.",
+          "Set up a Charles Schwab or Wise account before you leave the US — both offer free international ATM withdrawals.",
+          "Keep ¥10,000–¥20,000 cash on hand at all times for markets and small shops.",
+          "IC cards (Suica, ICOCA) can be used at convenience stores and some supermarkets — pick one up at the airport."
+        ],
+        "tips": [
+          "Never tip at Japanese restaurants or stores — it can be considered rude.",
+          "Consumption tax (10%) is added to most purchases — prices on tags often exclude tax.",
+          "Tax-free shopping is available at some stores for SOFA-status shoppers — ask at the register.",
+          "Receipts are detailed and always provided — keep them for TRICARE reimbursement if needed."
+        ]
+      },
+      {
+        "heading": "Finding American Brands",
+        "body": "Missing specific American foods is common. Here is where to find them.",
+        "contacts": [],
+        "steps": [],
+        "tips": [
+          "The commissary is your best source for American brands — shop there first.",
+          "Costco Japan carries many US brands including Kirkland products.",
+          "Don Quijote often carries imported American snacks and drinks in its import section.",
+          "Amazon Japan ships quickly and carries many imported food items.",
+          "iHerb ships supplements and health foods to Japan with reasonable shipping costs.",
+          "Local Facebook groups frequently post when specific items arrive at the commissary."
+        ]
+      }
+    ]
+  }
+]

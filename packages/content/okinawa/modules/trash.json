@@ -1,0 +1,42 @@
+[
+  {
+    "villageId": "yomitan",
+    "category": "burnable",
+    "title": "Burnable Trash",
+    "bagColor": "blue",
+    "bagNote": "Must use Yomitan-designated blue bags. Available at most supermarkets and convenience stores.",
+    "instructions": [
+      "Food scraps, paper, clothing, rubber, leather",
+      "Drain all liquid from food waste before bagging",
+      "Place out before 8:00 AM on pickup day"
+    ],
+    "pickupDays": "Tuesday, Friday",
+    "pickupTime": "Before 8:00 AM"
+  },
+  {
+    "villageId": "yomitan",
+    "category": "nonBurnable",
+    "title": "Non-Burnable Trash",
+    "bagNote": "Use the same Yomitan-designated bags.",
+    "instructions": [
+      "Ceramics, glass (non-bottle), small appliances",
+      "Items must fit inside the bag or be less than 30cm",
+      "Larger items require a separate large-item pickup request"
+    ],
+    "pickupDays": "2nd and 4th Wednesday of each month",
+    "pickupTime": "Before 8:00 AM"
+  },
+  {
+    "villageId": "yomitan",
+    "category": "cans",
+    "title": "Cans",
+    "bagNote": "Any clear or semi-transparent bag is fine.",
+    "instructions": [
+      "Rinse cans before disposal",
+      "Crush if possible to save space",
+      "Aerosol cans: empty completely and remove the cap"
+    ],
+    "pickupDays": "1st and 3rd Wednesday of each month",
+    "pickupTime": "Before 8:00 AM"
+  }
+]

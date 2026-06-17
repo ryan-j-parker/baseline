@@ -1,0 +1,281 @@
+[
+  {
+    "id": "sofa-license",
+    "title": "SOFA License",
+    "icon": "🪪",
+    "sections": [
+      {
+        "heading": "Getting Your SOFA Driver's License",
+        "body": "Under the Status of Forces Agreement (SOFA), US military members and dependents can drive in Japan with a SOFA license instead of a Japanese license. You receive this at the Newcomer's Brief on base.",
+        "contacts": [
+          {
+            "label": "Camp Foster License Section",
+            "number": "098-970-4206",
+            "note": "Handles SOFA license issuance and renewals."
+          }
+        ],
+        "steps": [
+          "Attend the mandatory Newcomer's Brief — your SOFA license is issued here.",
+          "Bring your valid US state driver's license.",
+          "Bring your military ID and orders.",
+          "Your SOFA license is tied to your SOFA status — it expires when your orders end.",
+          "Renew at the license section when you receive follow-on orders or PCS."
+        ],
+        "tips": [
+          "Your SOFA license is only valid on and around US military installations and on Japanese public roads.",
+          "You cannot use a SOFA license to rent a car at a Japanese rental agency — they require a Japanese or international license.",
+          "Keep your US license valid — you'll need it when you return stateside."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jci",
+    "title": "JCI Insurance",
+    "icon": "📄",
+    "sections": [
+      {
+        "heading": "What is JCI?",
+        "body": "JCI (Jidosha Songai Baisho Sekinin Hoken) is Japan's mandatory vehicle liability insurance. Every car on the road in Japan must have it. It is separate from your regular auto insurance and covers bodily injury to third parties only.",
+        "contacts": [
+          {
+            "label": "USAA (Auto Insurance)",
+            "number": "1-800-531-8722",
+            "note": "Most military families use USAA for their regular auto policy overseas."
+          }
+        ],
+        "steps": [
+          "When buying a car, confirm JCI is current — it transfers with the vehicle.",
+          "Check the JCI expiration date on the windshield sticker before purchasing.",
+          "Renew JCI at any shakken (vehicle inspection) station or through your dealer.",
+          "JCI is typically purchased for 1, 2, or 3 years at a time.",
+          "Keep your JCI certificate in the vehicle at all times."
+        ],
+        "tips": [
+          "JCI does NOT cover damage to your own vehicle or property — you need separate auto insurance for that.",
+          "USAA provides overseas auto coverage and is highly recommended for military families.",
+          "If you buy a car with expired JCI, you cannot legally drive it until JCI is renewed.",
+          "JCI cost varies by vehicle type — typically ¥20,000–¥30,000 for a standard passenger car."
+        ]
+      },
+      {
+        "heading": "Shakken (Vehicle Inspection)",
+        "body": "Shakken is Japan's mandatory vehicle inspection, similar to a US state inspection but much more thorough. New cars require it after 3 years, then every 2 years after that. JCI is renewed at the same time.",
+        "contacts": [],
+        "steps": [
+          "Check when your car's shakken is due — it's listed on the windshield sticker.",
+          "Take the car to a certified inspection station (指定工場) or dealer.",
+          "The inspection covers safety, emissions, and mechanical condition.",
+          "Budget for repairs — shakken stations will flag any issues that must be fixed to pass.",
+          "JCI is renewed as part of the shakken process."
+        ],
+        "tips": [
+          "Shakken can cost ¥100,000–¥200,000+ depending on the car's condition and needed repairs.",
+          "A car with shakken coming up soon may be priced lower — factor in the cost.",
+          "Many families sell their car before shakken is due rather than pay for it.",
+          "On-base mechanics can help prepare your car for shakken."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "car-buying",
+    "title": "Buying a Car",
+    "icon": "🔑",
+    "sections": [
+      {
+        "heading": "On-Base Options",
+        "body": "The easiest starting point for most families. Prices are fair, sellers are fellow military, and transactions are straightforward.",
+        "contacts": [
+          {
+            "label": "Lemon Lot (Camp Foster)",
+            "number": "",
+            "note": "On-base used car lot. Browse posted vehicles near the PX. Cash or check only."
+          },
+          {
+            "label": "Facebook: Okinawa Military Car Sales",
+            "number": "",
+            "note": "Search Facebook Groups for active military car sales groups. Most active marketplace on island."
+          }
+        ],
+        "steps": [
+          "Check the Lemon Lot on base first — vehicles are sold by departing military families.",
+          "Join Okinawa military Facebook groups — cars move fast, check daily.",
+          "Inspect the JCI sticker and shakken date before agreeing to a price.",
+          "Have a trusted mechanic inspect the car before purchase if possible.",
+          "Transfer ownership at the base legal office or through your unit's admin."
+        ],
+        "tips": [
+          "The best deals are from families PCSing out — they need to sell fast.",
+          "Watch for posts in the last 2–4 weeks before typical PCS season (June–August).",
+          "Kei cars (small Japanese cars) are cheap to buy, insure, and maintain — popular with families.",
+          "Budget ¥200,000–¥500,000 ($1,500–$3,500) for a reliable used car on island."
+        ]
+      },
+      {
+        "heading": "Off-Base Options",
+        "body": "Japanese dealerships and auction sites offer more selection but require more navigation.",
+        "contacts": [
+          {
+            "label": "Yahoo Auctions Japan",
+            "number": "https://auctions.yahoo.co.jp",
+            "note": "Largest used car marketplace in Japan. Use a proxy service or ask a Japanese-speaking friend."
+          },
+          {
+            "label": "GoodSpeed Okinawa",
+            "number": "098-989-5000",
+            "note": "Local dealership experienced with military customers. Some English support."
+          },
+          {
+            "label": "Navi Okinawa",
+            "number": "098-934-1000",
+            "note": "Another local dealer popular with military families."
+          }
+        ],
+        "steps": [
+          "Visit dealerships in the Chatan and Okinawa City areas — most experienced with military buyers.",
+          "Bring your SOFA license, military ID, and orders.",
+          "Negotiate — Japanese car prices are often negotiable, especially at smaller lots.",
+          "Confirm the dealer handles the title transfer and JCI paperwork.",
+          "For Yahoo Auctions, use a proxy bidding service or ask a Japanese-speaking colleague."
+        ],
+        "tips": [
+          "Dealerships near base understand SOFA status and the PCS cycle — use this to your advantage.",
+          "Avoid buying a car that needs immediate shakken unless you've budgeted for it.",
+          "Japanese used cars are generally well-maintained — mileage is less of a concern than in the US."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "road-tax",
+    "title": "Road Tax",
+    "icon": "🧾",
+    "sections": [
+      {
+        "heading": "Japanese Road Tax (自動車税)",
+        "body": "Japan's annual road tax is based on engine displacement. Bills are mailed in May and must be paid by the end of May. This catches many new arrivals off guard.",
+        "contacts": [
+          {
+            "label": "Okinawa Prefecture Tax Office",
+            "number": "098-866-2166",
+            "note": "For questions about your road tax bill."
+          }
+        ],
+        "steps": [
+          "Watch for a road tax bill (自動車税) mailed to your address every May.",
+          "Pay at any convenience store (7-Eleven, Family Mart, Lawson) using the payment slip.",
+          "Payment is due by the end of May each year.",
+          "Keep the payment receipt — you'll need it when selling the car or at shakken.",
+          "If you buy a car mid-year, the previous owner's payment covers that year."
+        ],
+        "tips": [
+          "Road tax ranges from about ¥25,000–¥50,000 depending on engine size.",
+          "Kei cars have a lower road tax rate — one reason they're popular.",
+          "If you miss the May deadline, you can still pay at the tax office but may face a small penalty.",
+          "When you sell or export your car, you may be eligible for a pro-rated refund."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "driving-rules",
+    "title": "Driving Rules",
+    "icon": "🛣️",
+    "sections": [
+      {
+        "heading": "Key Differences from US Driving",
+        "body": "Japan drives on the left side of the road. Most new arrivals adjust within a few days, but the first week requires extra focus.",
+        "contacts": [],
+        "steps": [
+          "Drive on the LEFT side of the road — the driver sits on the RIGHT.",
+          "At intersections, look RIGHT first (traffic comes from your right).",
+          "Speed limits are strictly enforced — typically 40–60 km/h on most roads.",
+          "Left turns are the 'easy' turn; right turns cross oncoming traffic.",
+          "Expressways (高速道路) require a separate toll — get an ETC card or pay cash at booths."
+        ],
+        "tips": [
+          "The biggest adjustment is turns — slow down and think before every right turn.",
+          "Japanese drivers are courteous and patient — don't be surprised by politeness on the road.",
+          "Rain and typhoon conditions make roads slippery — Okinawa roads can be slick even in light rain.",
+          "Drunk driving laws are extremely strict in Japan — zero tolerance, severe penalties.",
+          "Parking is limited in cities — use paid lots (コインパーキング) rather than risk a fine."
+        ]
+      },
+      {
+        "heading": "Typhoon Driving",
+        "body": "During typhoon conditions, driving restrictions may be in effect on base. Follow TCCOR guidance.",
+        "contacts": [
+          {
+            "label": "USFJ Typhoon Condition Hotline",
+            "number": "098-970-4105",
+            "note": "Current TCCOR status. Check before driving during typhoon season."
+          }
+        ],
+        "steps": [
+          "Check the TCCOR status before driving during typhoon season (June–November).",
+          "TCCOR 1 means destructive winds are imminent — do not drive.",
+          "TCCOR 2 means winds are possible within 24 hours — limit non-essential travel.",
+          "Park away from trees and power lines before a typhoon hits.",
+          "Do not drive through flooded roads — even shallow water can hide severe damage."
+        ],
+        "tips": [
+          "Typhoon season runs June through November — be prepared.",
+          "Keep a full tank of gas when a typhoon is forecast.",
+          "After a typhoon, watch for debris, downed power lines, and damaged roads.",
+          "AFN radio (AM 648) broadcasts official typhoon updates."
+        ]
+      },
+      {
+        "heading": "Navigation",
+        "body": "Waze and Google Maps both work well in Okinawa. Japanese addresses work differently from US addresses — use landmarks and map apps rather than street addresses.",
+        "contacts": [],
+        "steps": [
+          "Download Waze or Google Maps with offline Okinawa maps before you need them.",
+          "Japanese addresses go from largest to smallest (prefecture → city → block → house number).",
+          "Use the place name or phone number to search rather than a street address when possible.",
+          "Expressway entrances can be confusing — follow the green highway signs.",
+          "Gate numbers matter — know which base gate is closest to your destination."
+        ],
+        "tips": [
+          "Waze has an active Okinawa military community reporting road conditions.",
+          "Google Maps walking directions are excellent for navigating on foot in cities.",
+          "Save your base gates, housing area, and frequented spots as favorites in your map app.",
+          "Some roads near bases are not on older maps — use an up-to-date app."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "selling-car",
+    "title": "Selling a Car",
+    "icon": "🤝",
+    "sections": [
+      {
+        "heading": "Selling Before PCS",
+        "body": "Most families sell their car 2–4 weeks before their PCS date. Start early — the market moves fast during peak PCS season but can be slow off-season.",
+        "contacts": [
+          {
+            "label": "Facebook: Okinawa Military Car Sales",
+            "number": "",
+            "note": "Most active selling platform. Post with photos, JCI date, shakken date, and asking price."
+          }
+        ],
+        "steps": [
+          "Post in Okinawa military Facebook groups with clear photos and all key details.",
+          "Include JCI expiration date, shakken date, mileage, and any known issues.",
+          "Price competitively — buyers know the market.",
+          "Complete the title transfer at the base legal office or through your unit's admin.",
+          "Cancel your auto insurance after the sale is complete.",
+          "If the car doesn't sell, the Lemon Lot on base accepts consignment vehicles."
+        ],
+        "tips": [
+          "Price drops fast if you wait too long — list early.",
+          "Cars with fresh JCI and shakken sell fastest and at the best prices.",
+          "Be honest about the condition — the military community is small and word travels.",
+          "Keep your road tax receipt — it may help the buyer or be needed for transfer paperwork."
+        ]
+      }
+    ]
+  }
+]
