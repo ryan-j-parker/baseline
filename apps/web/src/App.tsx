@@ -13,6 +13,7 @@ import SchoolsScreen from "./screens/SchoolsScreen.tsx";
 import GroceriesScreen from "./screens/GroceriesScreen.tsx";
 import MapsScreen from "./screens/MapsScreen.tsx";
 import SettingsScreen from "./screens/SettingsScreen.tsx";
+import NotFoundScreen from "./screens/NotFoundScreen.tsx";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 1000 * 60 * 60 * 24 } },
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/groceries" element={<GroceriesScreen />} />
           <Route path="/maps" element={<MapsScreen />} />
           <Route path="/settings" element={<SettingsScreen />} />
+          <Route path="*" element={<NotFoundScreen />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

@@ -6,9 +6,9 @@ export default function HomeScreen() {
   const navigate = useNavigate();
   const villageId = useUserPrefsStore((s) => s.villageId);
   
-  const villageName = villageId
-    ? villageId.charAt(0).toUpperCase() + villageId.slice(1).replace("-", " ")
-    : "Okinawa";
+const villageName = villageId
+  ? villageId.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+  : "Okinawa";
 
   function handleTileTap(tile: typeof HOME_TILES[0]) {
     if (tile.isLive) {
