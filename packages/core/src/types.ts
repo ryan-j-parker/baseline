@@ -12,8 +12,12 @@ export const VILLAGES: { id: VillageId; name: string; nameJa: string }[] = [
 ];
 
 export type TrashCategory =
-  | "burnable" | "nonBurnable" | "cans"
-  | "bottles" | "plastic" | "cardboard";
+  | "burnable"
+  | "nonBurnable"
+  | "cans"
+  | "glass"
+  | "plastic bottles"
+  | "cardboard";
 
 export type TrashRule = {
   villageId: VillageId;

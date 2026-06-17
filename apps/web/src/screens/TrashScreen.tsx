@@ -4,19 +4,32 @@ import { useUserPrefsStore } from "../stores/useUserPrefsStore";
 import trashData from "@baseline/content/okinawa/modules/trash.json";
 import type { TrashCategory } from "@baseline/core";
 
+type TrashRule = {
+  villageId: string;
+  category: TrashCategory;
+  title: string;
+  bagNote?: string;
+  bagColor?: string;
+  instructions: string[];
+  pickupDays?: string;
+  pickupTime?: string;
+};
+
+const typedTrashData = trashData as TrashRule[];
+
 const CATEGORY_LABELS: Record<TrashCategory, string> = {
   burnable: "🔥 Burnable",
   nonBurnable: "🚫 Non-Burnable",
   cans: "🥫 Cans",
-  bottles: "🍶 Bottles",
-  plastic: "♻️ Plastic",
+  glass: "🫙 Glass",
+  "plastic bottles": "♻️ Plastic bottles",
   cardboard: "📦 Cardboard",
 };
 
 export default function TrashScreen() {
   const navigate = useNavigate();
   const villageId = useUserPrefsStore((s) => s.villageId);
-  const villageRules = trashData.filter((r) => r.villageId === villageId);
+  const villageRules = typedTrashData.filter((r) => r.villageId === villageId);
   const categories = villageRules.map((r) => r.category as TrashCategory);
   const [activeCategory, setActiveCategory] = useState<TrashCategory>(categories[0]);
   const activeRule = villageRules.find((r) => r.category === activeCategory);

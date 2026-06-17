@@ -12,6 +12,7 @@ import CarAndDrivingScreen from "./screens/CarAndDrivingScreen.tsx";
 import SchoolsScreen from "./screens/SchoolsScreen.tsx";
 import GroceriesScreen from "./screens/GroceriesScreen.tsx";
 import MapsScreen from "./screens/MapsScreen.tsx";
+import SettingsScreen from "./screens/SettingsScreen.tsx";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 1000 * 60 * 60 * 24 } },
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/schools" element={<SchoolsScreen />} />
           <Route path="/groceries" element={<GroceriesScreen />} />
           <Route path="/maps" element={<MapsScreen />} />
+          <Route path="/settings" element={<SettingsScreen />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

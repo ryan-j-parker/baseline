@@ -38,5 +38,44 @@
     ],
     "pickupDays": "1st and 3rd Wednesday of each month",
     "pickupTime": "Before 8:00 AM"
+  },
+  {
+    "villageId": "yomitan",
+    "category": "glass",
+    "title": "Glass Bottles & Jars",
+    "bagNote": "Any clear or semi-transparent bag is fine.",
+    "instructions": [
+      "Rinse bottles and jars before disposal",
+      "Remove caps and lids — dispose of separately as non-burnable",
+      "Do not break glass before disposal"
+    ],
+    "pickupDays": "1st and 3rd Wednesday of each month",
+    "pickupTime": "Before 8:00 AM"
+  },
+  {
+        "villageId": "yomitan",
+        "category": "plastic bottles",
+        "title": "Plastic Bottles (PET)",
+        "bagNote": "Any clear or semi-transparent bag is fine.",
+        "instructions": [
+        "Rinse bottles clean before disposal",
+        "Remove caps and labels — dispose of separately as non-burnable",
+        "Crush bottles to save space"
+        ],
+        "pickupDays": "2nd and 4th Monday of each month",
+        "pickupTime": "Before 8:00 AM"
+    },
+  {
+    "villageId": "yomitan",
+    "category": "cardboard",
+    "title": "Cardboard",
+    "bagNote": "Cardboard must be flattened and tied in bundles. No bags needed.",
+    "instructions": [
+      "Flatten all cardboard boxes",
+      "Tie bundles with string or twine — do not use tape",
+      "Bundles should be no larger than 1m x 1m x 0.5m"
+    ],
+    "pickupDays": "2nd and 4th Monday of each month",
+    "pickupTime": "Before 8:00 AM"
   }
-]
+  ]

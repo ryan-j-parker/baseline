@@ -22,19 +22,23 @@ export default function HomeScreen() {
       {/* Header */}
       <div className="px-5 pt-10 pb-4 relative" style={{ backgroundColor: "var(--color-brand)" }}>
         <h1 className="text-2xl font-bold text-white">BaseLine</h1>
-        <button
-          onClick={() => navigate("/select-village")}
-          className="mt-1 text-blue-200 text-sm active:opacity-70"
-        >
-          📍 {villageName} — change
-        </button>
-        <button
-          onClick={() => navigate("/search")}
-          className="absolute right-5 top-10 text-white text-2xl active:opacity-70"
-        >
-  🔍
-</button>
-      </div>
+        <p className="mt-1 text-blue-200 text-sm">📍 {villageName}</p>
+        {/* Header actions */}
+  <div className="absolute right-5 top-10 flex gap-4">
+    <button
+      onClick={() => navigate("/search")}
+      className="text-white text-2xl active:opacity-70"
+    >
+      🔍
+    </button>
+    <button
+      onClick={() => navigate("/settings")}
+      className="text-white text-2xl active:opacity-70"
+    >
+      ⚙️
+    </button>
+  </div>
+  </div>
 
       {/* Tile grid */}
       <div className="grid grid-cols-2 gap-3 p-4">
