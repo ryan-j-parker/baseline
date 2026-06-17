@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { buildSearchIndex } from "@baseline/core";
+import { Analytics } from "../lib/analytics";
 
 const index = buildSearchIndex();
 
@@ -33,14 +34,19 @@ export default function SearchScreen() {
       {/* Search input */}
       <div className="px-4 py-3 sticky top-0 bg-white shadow-sm z-10">
         <input
-          type="search"
-          placeholder='Try "trash bags", "dentist", "typhoon"...'
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          autoFocus
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-sm focus:outline-none focus:ring-2"
-          style={{ "--tw-ring-color": "var(--color-brand)" } as React.CSSProperties}
-        />
+  type="search"
+  placeholder='Try "trash bags", "dentist", "typhoon"...'
+  value={query}
+  onChange={(e) => {
+    setQuery(e.target.value);
+    if (e.target.value.length > 2) {
+      Analytics.searchPerformed(e.target.value);
+    }
+  }}
+  autoFocus
+  className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-sm focus:outline-none focus:ring-2"
+  style={{ "--tw-ring-color": "var(--color-brand)" } as React.CSSProperties}
+/>
       </div>
 
       {/* Results */}

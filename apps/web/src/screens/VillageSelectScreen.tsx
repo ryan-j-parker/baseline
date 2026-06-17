@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { VILLAGES } from "@baseline/core";
 import { useUserPrefsStore } from "../stores/useUserPrefsStore";
 import type { VillageId } from "@baseline/core";
+import { Analytics } from "../lib/analytics";
 
 export default function VillageSelectScreen() {
   const navigate = useNavigate();
@@ -9,10 +10,11 @@ export default function VillageSelectScreen() {
   const completeOnboarding = useUserPrefsStore((s) => s.completeOnboarding);
 
   function handleSelect(id: VillageId) {
-    setVillageId(id);
-    completeOnboarding();
-    navigate("/");
-  }
+  Analytics.villageSelected(id);
+  setVillageId(id);
+  completeOnboarding();
+  navigate("/");
+}
 
   return (
     <div className="min-h-screen flex flex-col px-6 py-12"
