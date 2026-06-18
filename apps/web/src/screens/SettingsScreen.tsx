@@ -1,19 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { VILLAGES } from "@baseline/core";
 import { useUserPrefsStore } from "../stores/useUserPrefsStore";
+import { useAuthStore } from "../stores/useAuthStore";
+import { supabase } from "../lib/supabase";
 import type { VillageId } from "@baseline/core";
 
 export default function SettingsScreen() {
   const navigate = useNavigate();
   const villageId = useUserPrefsStore((s) => s.villageId);
   const setVillageId = useUserPrefsStore((s) => s.setVillageId);
+  const { user, signOut } = useAuthStore();
 
   function handleVillageChange(id: VillageId) {
     setVillageId(id);
   }
 
   return (
-    <div className="min-h-screen flex flex-col overflow-y-auto" style={{ backgroundColor: "var(--color-surface)" }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-surface)" }}>
 
       {/* Header */}
       <div className="px-5 pt-10 pb-4" style={{ backgroundColor: "var(--color-brand)" }}>
@@ -24,7 +27,7 @@ export default function SettingsScreen() {
         <p className="text-blue-200 text-sm mt-1">Manage your BaseLine preferences</p>
       </div>
 
-      <div className="px-4 py-4 flex flex-col gap-6 pb-12">
+      <div className="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-6 pb-12">
 
         {/* Village selection */}
         <div>
@@ -54,6 +57,38 @@ export default function SettingsScreen() {
                 </div>
               </button>
             ))}
+          </div>
+        </div>
+
+        {/* Account */}
+        <div>
+          <p className="text-xs text-gray-400 uppercase tracking-wide mb-2 px-1">Account</p>
+          <div className="bg-white rounded-2xl px-5 py-4 shadow-sm flex flex-col gap-3">
+            {user ? (
+              <>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 text-sm">Signed in as</span>
+                  <span className="text-gray-800 font-medium text-sm">{user.email}</span>
+                </div>
+                <button
+                  onClick={async () => {
+                    await supabase.auth.signOut();
+                    signOut();
+                  }}
+                  className="w-full py-3 rounded-xl border border-red-200 text-red-500 text-sm font-medium active:scale-95 transition-transform"
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={() => navigate("/sign-in")}
+                className="w-full py-3 rounded-xl text-white text-sm font-medium active:scale-95 transition-transform"
+                style={{ backgroundColor: "var(--color-brand)" }}
+              >
+                Sign In
+              </button>
+            )}
           </div>
         </div>
 
