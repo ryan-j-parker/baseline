@@ -6,7 +6,7 @@ const isProd = import.meta.env.PROD;
 
 const plausible = isProd
   ? Plausible({
-      domain: "your-app.vercel.app", // update this when you have a custom domain
+      domain: "onisland.io",
       trackLocalhost: false,
     })
   : null;
