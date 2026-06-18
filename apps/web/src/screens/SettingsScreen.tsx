@@ -71,6 +71,12 @@ export default function SettingsScreen() {
                   <span className="text-gray-800 font-medium text-sm">{user.email}</span>
                 </div>
                 <button
+                  onClick={() => navigate("/profile")}
+                  className="w-full py-3 rounded-xl border border-gray-200 text-gray-700 text-sm font-medium active:scale-95 transition-transform"
+                >
+                  Edit Profile
+                </button>
+                <button
                   onClick={async () => {
                     await supabase.auth.signOut();
                     signOut();

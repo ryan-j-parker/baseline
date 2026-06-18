@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-route
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useUserPrefsStore } from "./stores/useUserPrefsStore";
 import { useAuthStore } from "./stores/useAuthStore";
+import { useProfile } from "./hooks/useProfile";
 import { supabase } from "./lib/supabase";
 import { trackPageView } from "./lib/analytics";
 import VillageSelectScreen from "./screens/VillageSelectScreen";
@@ -21,6 +22,7 @@ import NotFoundScreen from "./screens/NotFoundScreen";
 import SignInScreen from "./screens/SignInScreen";
 import AuthCallbackScreen from "./screens/AuthCallbackScreen";
 import ScrollToTop from "./components/ScrollToTop";
+import ProfileScreen from "./screens/ProfileScreen";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 1000 * 60 * 60 * 24 } },
@@ -30,6 +32,7 @@ function AppRoutes() {
   const villageId = useUserPrefsStore((s) => s.villageId);
   const { setUser, setSession } = useAuthStore();
   const location = useLocation();
+  useProfile();
 
   useEffect(() => {
     trackPageView(location.pathname);
@@ -67,6 +70,7 @@ function AppRoutes() {
         <Route path="/sign-in" element={<SignInScreen />} />
         <Route path="/auth/callback" element={<AuthCallbackScreen />} />
         <Route path="*" element={<NotFoundScreen />} />
+        <Route path="/profile" element={<ProfileScreen />} />
       </Routes>
     </>
   );
