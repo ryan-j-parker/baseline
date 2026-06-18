@@ -23,6 +23,12 @@ export default function SponsoredListingCard({ listing }: Props) {
     window.open(listing.website, "_blank", "noopener noreferrer");
   }
 
+  function handleWaze() {
+    if (!listing.waze_url) return;
+    Analytics.mapOpened(listing.title, "waze");
+    window.location.href = listing.waze_url;
+  }
+
   function handleMap() {
     if (!listing.map_url) return;
     Analytics.mapOpened(listing.title, "google");
@@ -52,7 +58,7 @@ export default function SponsoredListingCard({ listing }: Props) {
         </div>
         <p className="text-gray-500 text-sm mb-4">{listing.description}</p>
 
-        {/* Action buttons */}
+        {/* Action buttons — Waze first */}
         <div className="flex gap-2 flex-wrap">
           {listing.phone && (
             <button
@@ -63,12 +69,13 @@ export default function SponsoredListingCard({ listing }: Props) {
               📞 Call
             </button>
           )}
-          {listing.website && (
+          {listing.waze_url && (
             <button
-              onClick={handleWebsite}
-              className="flex items-center gap-1 px-3 py-2 rounded-xl text-sm font-medium bg-gray-100 text-gray-700 active:scale-95 transition-transform"
+              onClick={handleWaze}
+              className="flex items-center gap-1 px-3 py-2 rounded-xl text-sm font-medium text-white active:scale-95 transition-transform"
+              style={{ backgroundColor: "#33CCFF" }}
             >
-              🌐 Website
+              🗺️ Waze
             </button>
           )}
           {listing.map_url && (
@@ -76,7 +83,15 @@ export default function SponsoredListingCard({ listing }: Props) {
               onClick={handleMap}
               className="flex items-center gap-1 px-3 py-2 rounded-xl text-sm font-medium bg-gray-100 text-gray-700 active:scale-95 transition-transform"
             >
-              📍 Map
+              📍 Maps
+            </button>
+          )}
+          {listing.website && (
+            <button
+              onClick={handleWebsite}
+              className="flex items-center gap-1 px-3 py-2 rounded-xl text-sm font-medium bg-gray-100 text-gray-700 active:scale-95 transition-transform"
+            >
+              🌐 Website
             </button>
           )}
         </div>

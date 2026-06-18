@@ -8,6 +8,7 @@ export type SponsoredListing = {
   description: string;
   phone: string | null;
   website: string | null;
+  waze_url: string | null;
   map_url: string | null;
   english_friendly: boolean;
   location_id: string;
