@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import carData from "@baseline/content/okinawa/modules/car-and-driving.json";
+import SponsoredListingCard from "../components/SponsoredListingCard";
+import { useSponsoredListings } from "../hooks/useSponsoredListings";
 
 type Contact = {
   label: string;
@@ -55,6 +57,7 @@ export default function CarAndDrivingScreen() {
   const [activeId, setActiveId] = useState<string>(carData[0].id);
   const active = carData.find((c) => c.id === activeId) as CarCategory;
   const externalLinks = EXTERNAL_LINKS[activeId] ?? [];
+  const { data: sponsoredListings } = useSponsoredListings("car");
 
   function handleContact(number: string) {
     if (!number) return;
@@ -105,6 +108,16 @@ export default function CarAndDrivingScreen() {
 
       {/* Content */}
       <div className="px-4 pb-12 flex flex-col gap-6">
+
+        {/* Sponsored listings — car-buying tab only */}
+        {activeId === "car-buying" && sponsoredListings && sponsoredListings.length > 0 && (
+          <div className="flex flex-col gap-3">
+            <p className="text-xs text-gray-400 uppercase tracking-wide px-1">Featured</p>
+            {sponsoredListings.map((listing) => (
+              <SponsoredListingCard key={listing.id} listing={listing} />
+            ))}
+          </div>
+        )}
 
         {/* External links */}
         {externalLinks.length > 0 && (
