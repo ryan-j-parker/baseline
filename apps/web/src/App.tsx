@@ -6,7 +6,6 @@ import { useAuthStore } from "./stores/useAuthStore";
 import { useProfile } from "./hooks/useProfile";
 import { supabase } from "./lib/supabase";
 import { trackPageView } from "./lib/analytics";
-import VillageSelectScreen from "./screens/VillageSelectScreen";
 import HomeScreen from "./screens/HomeScreen";
 import TrashScreen from "./screens/TrashScreen";
 import EmergencyScreen from "./screens/EmergencyScreen";
@@ -23,16 +22,16 @@ import SignInScreen from "./screens/SignInScreen";
 import AuthCallbackScreen from "./screens/AuthCallbackScreen";
 import ScrollToTop from "./components/ScrollToTop";
 import ProfileScreen from "./screens/ProfileScreen";
+import OnboardingScreen from "./screens/OnboardingScreen";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 1000 * 60 * 60 * 24 } },
 });
 
 function AppRoutes() {
-  const villageId = useUserPrefsStore((s) => s.villageId);
+  const hasCompletedOnboarding = useUserPrefsStore((s) => s.hasCompletedOnboarding);
   const { setUser, setSession } = useAuthStore();
   const location = useLocation();
-  useProfile();
 
   useEffect(() => {
     trackPageView(location.pathname);
@@ -48,15 +47,18 @@ function AppRoutes() {
     return () => subscription.unsubscribe();
   }, []);
 
+  useProfile();
+
   return (
     <>
       <ScrollToTop />
       <Routes>
         <Route
           path="/"
-          element={villageId ? <HomeScreen /> : <Navigate to="/select-village" replace />}
+          element={hasCompletedOnboarding ? <HomeScreen /> : <Navigate to="/onboarding" replace />}
         />
-        <Route path="/select-village" element={<VillageSelectScreen />} />
+        <Route path="/onboarding" element={<OnboardingScreen />} />
+        <Route path="/select-village" element={<OnboardingScreen />} />
         <Route path="/trash" element={<TrashScreen />} />
         <Route path="/emergency" element={<EmergencyScreen />} />
         <Route path="/utilities" element={<UtilitiesScreen />} />
@@ -69,8 +71,8 @@ function AppRoutes() {
         <Route path="/settings" element={<SettingsScreen />} />
         <Route path="/sign-in" element={<SignInScreen />} />
         <Route path="/auth/callback" element={<AuthCallbackScreen />} />
-        <Route path="*" element={<NotFoundScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
+        <Route path="*" element={<NotFoundScreen />} />
       </Routes>
     </>
   );

@@ -1,19 +1,19 @@
 import { useNavigate } from "react-router-dom";
-import { VILLAGES } from "@baseline/core";
+import { VILLAGES, BASES, HOUSING_AGENCIES } from "@baseline/core";
 import { useUserPrefsStore } from "../stores/useUserPrefsStore";
 import { useAuthStore } from "../stores/useAuthStore";
 import { supabase } from "../lib/supabase";
-import type { VillageId } from "@baseline/core";
 
 export default function SettingsScreen() {
   const navigate = useNavigate();
-  const villageId = useUserPrefsStore((s) => s.villageId);
-  const setVillageId = useUserPrefsStore((s) => s.setVillageId);
-  const { user, signOut } = useAuthStore();
 
-  function handleVillageChange(id: VillageId) {
-    setVillageId(id);
-  }
+  const villageId = useUserPrefsStore((s) => s.villageId);
+  const housingType = useUserPrefsStore((s) => s.housingType);
+  const housingAgency = useUserPrefsStore((s) => s.housingAgency);
+  const baseId = useUserPrefsStore((s) => s.baseId);
+  const resetOnboarding = useUserPrefsStore((s) => s.resetOnboarding);
+
+  const { user, signOut } = useAuthStore();
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-surface)" }}>
@@ -29,34 +29,53 @@ export default function SettingsScreen() {
 
       <div className="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-6 pb-12">
 
-        {/* Village selection */}
+        {/* Setup */}
         <div>
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-2 px-1">Your Village</p>
-          <div className="flex flex-col gap-2">
-            {VILLAGES.map((village) => (
-              <button
-                key={village.id}
-                onClick={() => handleVillageChange(village.id)}
-                className={`
-                  w-full text-left px-5 py-4 rounded-2xl border transition-colors
-                  ${villageId === village.id
-                    ? "border-transparent text-white"
-                    : "bg-white border-gray-200 text-gray-800"
-                  }
-                `}
-                style={villageId === village.id ? { backgroundColor: "var(--color-brand)" } : {}}
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="font-medium">{village.name}</span>
-                    <span className="ml-2 text-sm opacity-60">{village.nameJa}</span>
-                  </div>
-                  {villageId === village.id && (
-                    <span className="text-white text-lg">✓</span>
-                  )}
-                </div>
-              </button>
-            ))}
+          <p className="text-xs text-gray-400 uppercase tracking-wide mb-2 px-1">Setup</p>
+          <div className="bg-white rounded-2xl px-5 py-4 shadow-sm flex flex-col gap-3">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 text-sm">Housing</span>
+              <span className="text-gray-800 font-medium text-sm capitalize">
+                {housingType?.replace("-", " ") ?? "Not set"}
+              </span>
+            </div>
+
+            {housingType === "off-base" && housingAgency && (
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600 text-sm">Agency</span>
+                <span className="text-gray-800 font-medium text-sm">
+                  {HOUSING_AGENCIES.find((a) => a.id === housingAgency)?.name ?? housingAgency}
+                </span>
+              </div>
+            )}
+
+            {housingType === "on-base" && baseId && (
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600 text-sm">Base</span>
+                <span className="text-gray-800 font-medium text-sm">
+                  {BASES.find((b) => b.id === baseId)?.name ?? baseId}
+                </span>
+              </div>
+            )}
+
+            {villageId && (
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600 text-sm">Village</span>
+                <span className="text-gray-800 font-medium text-sm">
+                  {VILLAGES.find((v) => v.id === villageId)?.name ?? villageId}
+                </span>
+              </div>
+            )}
+
+            <button
+              onClick={() => {
+                resetOnboarding();
+                navigate("/onboarding");
+              }}
+              className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 text-sm font-medium active:scale-95 transition-transform"
+            >
+              Update Housing Setup
+            </button>
           </div>
         </div>
 

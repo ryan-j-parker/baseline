@@ -21,8 +21,9 @@ const CATEGORY_LABELS: Record<TrashCategory, string> = {
   burnable: "🔥 Burnable",
   nonBurnable: "🚫 Non-Burnable",
   cans: "🥫 Cans",
+  bottles: "🍶 Bottles",
   glass: "🫙 Glass",
-  "plastic bottles": "♻️ Plastic bottles",
+  plastic: "♻️ Plastic",
   cardboard: "📦 Cardboard",
 };
 

@@ -1,17 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import { useUserPrefsStore } from "../stores/useUserPrefsStore";
 import { HOME_TILES } from "../lib/tiles";
+import { Analytics } from "../lib/analytics";
 
 export default function HomeScreen() {
   const navigate = useNavigate();
   const villageId = useUserPrefsStore((s) => s.villageId);
-  
-const villageName = villageId
-  ? villageId.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
-  : "Okinawa";
+  const housingType = useUserPrefsStore((s) => s.housingType);
+  const baseId = useUserPrefsStore((s) => s.baseId);
+
+  function getLocationLabel(): string {
+    if (housingType === "on-base" && baseId) {
+      return baseId.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+    }
+    if (housingType === "off-base" && villageId) {
+      return villageId.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+    }
+    return "Okinawa";
+  }
 
   function handleTileTap(tile: typeof HOME_TILES[0]) {
     if (tile.isLive) {
+      Analytics.tileTapped(tile.id);
       navigate(tile.route);
     }
   }
@@ -22,23 +32,24 @@ const villageName = villageId
       {/* Header */}
       <div className="px-5 pt-10 pb-4 relative" style={{ backgroundColor: "var(--color-brand)" }}>
         <h1 className="text-2xl font-bold text-white">BaseLine</h1>
-        <p className="mt-1 text-blue-200 text-sm">📍 {villageName}</p>
+        <p className="mt-1 text-blue-200 text-sm">📍 {getLocationLabel()}</p>
+
         {/* Header actions */}
-  <div className="absolute right-5 top-10 flex gap-4">
-    <button
-      onClick={() => navigate("/search")}
-      className="text-white text-2xl active:opacity-70"
-    >
-      🔍
-    </button>
-    <button
-      onClick={() => navigate("/settings")}
-      className="text-white text-2xl active:opacity-70"
-    >
-      ⚙️
-    </button>
-  </div>
-  </div>
+        <div className="absolute right-5 top-10 flex gap-4">
+          <button
+            onClick={() => navigate("/search")}
+            className="text-white text-2xl active:opacity-70"
+          >
+            🔍
+          </button>
+          <button
+            onClick={() => navigate("/settings")}
+            className="text-white text-2xl active:opacity-70"
+          >
+            ⚙️
+          </button>
+        </div>
+      </div>
 
       {/* Tile grid */}
       <div className="grid grid-cols-2 gap-3 p-4">
