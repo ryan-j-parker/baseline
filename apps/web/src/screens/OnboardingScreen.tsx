@@ -53,31 +53,38 @@ export default function OnboardingScreen() {
     navigate("/");
   }
 
-  // Welcome screen
+  // Welcome
   if (step === "welcome") {
     return (
       <div
         className="min-h-screen flex flex-col"
-        style={{ backgroundColor: "var(--color-surface)" }}
+        style={{
+          background: "linear-gradient(160deg, var(--color-brand-dark) 0%, var(--color-brand) 60%, #2563EB 100%)",
+        }}
       >
-        <div className="flex-1 flex flex-col items-center justify-center px-6 text-center">
-          <h1 className="text-4xl font-bold mb-2" style={{ color: "var(--color-brand)" }}>
-            BaseLine
+        <div className="flex-1 flex flex-col justify-end px-6 pb-16">
+          <p className="text-blue-300 text-xs font-semibold mb-3 tracking-widest uppercase">
+            Okinawa, Japan
+          </p>
+          <h1 className="text-5xl font-bold text-white mb-3 leading-tight">
+            Base<span style={{ color: "#93C5FD" }}>Line</span>
           </h1>
-          <p className="text-gray-500 text-lg mb-2">Welcome to Okinawa.</p>
-          <p className="text-gray-400 text-sm mb-12">
-            Your guide to life on island — from day one.
+          <p className="text-blue-100 text-lg mb-1">
+            Welcome to the island.
+          </p>
+          <p className="text-blue-300 text-sm mb-12">
+            Everything you need for your first days on Okinawa — offline, fast, and free.
           </p>
           <button
             onClick={() => setStep("housing-status")}
-            className="w-full max-w-sm py-4 rounded-2xl text-white font-semibold text-lg active:scale-95 transition-transform"
-            style={{ backgroundColor: "var(--color-brand)" }}
+            className="w-full py-4 rounded-2xl font-semibold text-base active:scale-95 transition-transform"
+            style={{ backgroundColor: "white", color: "var(--color-brand)" }}
           >
-            Get Started
+            Get Started →
           </button>
           <button
             onClick={handleSkip}
-            className="mt-4 text-gray-400 text-sm active:opacity-70"
+            className="mt-4 text-center text-blue-300 text-sm active:opacity-70 py-2"
           >
             Skip for now
           </button>
@@ -93,17 +100,18 @@ export default function OnboardingScreen() {
         className="min-h-screen flex flex-col px-6 py-12"
         style={{ backgroundColor: "var(--color-surface)" }}
       >
+        <button
+          onClick={() => setStep("welcome")}
+          className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+        >
+          ← Back
+        </button>
+
         <div className="mb-8">
-          <button
-            onClick={() => setStep("welcome")}
-            className="text-gray-400 text-sm mb-6 active:opacity-70"
-          >
-            ← Back
-          </button>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--color-text-primary)" }}>
             Have you moved into permanent housing?
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
             This helps us show you the right information.
           </p>
         </div>
@@ -113,30 +121,37 @@ export default function OnboardingScreen() {
             onClick={() => handleHousingStatus("off-base")}
             className="w-full text-left px-5 py-5 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
           >
-            <p className="font-semibold text-gray-800 text-lg">🏠 Yes — I'm off base</p>
-            <p className="text-gray-400 text-sm mt-1">Living in a local housing agency property</p>
+            <p className="font-semibold text-gray-800 text-base">🏠 Yes — I'm off base</p>
+            <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
+              Living in a local housing agency property
+            </p>
           </button>
 
           <button
             onClick={() => handleHousingStatus("on-base")}
             className="w-full text-left px-5 py-5 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
           >
-            <p className="font-semibold text-gray-800 text-lg">🪖 Yes — I'm on base</p>
-            <p className="text-gray-400 text-sm mt-1">Living in base housing</p>
+            <p className="font-semibold text-gray-800 text-base">🪖 Yes — I'm on base</p>
+            <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
+              Living in base housing
+            </p>
           </button>
 
           <button
             onClick={() => handleHousingStatus("temporary")}
             className="w-full text-left px-5 py-5 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
           >
-            <p className="font-semibold text-gray-800 text-lg">🏨 Not yet</p>
-            <p className="text-gray-400 text-sm mt-1">Still in a hotel or temporary lodging</p>
+            <p className="font-semibold text-gray-800 text-base">🏨 Not yet</p>
+            <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
+              Still in a hotel or temporary lodging
+            </p>
           </button>
         </div>
 
         <button
           onClick={handleSkip}
-          className="mt-6 text-center text-gray-400 text-sm active:opacity-70"
+          className="mt-8 text-center text-sm active:opacity-70 py-2"
+          style={{ color: "var(--color-text-muted)" }}
         >
           Skip for now
         </button>
@@ -144,22 +159,27 @@ export default function OnboardingScreen() {
     );
   }
 
-  // Select base (on-base flow)
+  // Select base
   if (step === "select-base") {
     return (
       <div
         className="min-h-screen flex flex-col px-6 py-12"
         style={{ backgroundColor: "var(--color-surface)" }}
       >
+        <button
+          onClick={() => setStep("housing-status")}
+          className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+        >
+          ← Back
+        </button>
+
         <div className="mb-8">
-          <button
-            onClick={() => setStep("housing-status")}
-            className="text-gray-400 text-sm mb-6 active:opacity-70"
-          >
-            ← Back
-          </button>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Which base?</h2>
-          <p className="text-gray-400 text-sm">Select your installation.</p>
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--color-text-primary)" }}>
+            Which base?
+          </h2>
+          <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+            Select your installation.
+          </p>
         </div>
 
         <div className="flex flex-col gap-3">
@@ -174,7 +194,8 @@ export default function OnboardingScreen() {
           ))}
           <button
             onClick={handleSkip}
-            className="w-full text-left px-5 py-4 rounded-2xl border border-dashed border-gray-300 text-gray-400 active:scale-95 transition-transform mt-2"
+            className="w-full text-left px-5 py-4 rounded-2xl border border-dashed border-gray-300 active:scale-95 transition-transform mt-2"
+            style={{ color: "var(--color-text-muted)" }}
           >
             Not sure yet
           </button>
@@ -183,24 +204,25 @@ export default function OnboardingScreen() {
     );
   }
 
-  // Select housing agency (off-base flow)
+  // Select agency
   if (step === "select-agency") {
     return (
       <div
         className="min-h-screen flex flex-col px-6 py-12"
         style={{ backgroundColor: "var(--color-surface)" }}
       >
+        <button
+          onClick={() => setStep("housing-status")}
+          className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+        >
+          ← Back
+        </button>
+
         <div className="mb-8">
-          <button
-            onClick={() => setStep("housing-status")}
-            className="text-gray-400 text-sm mb-6 active:opacity-70"
-          >
-            ← Back
-          </button>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--color-text-primary)" }}>
             Who is your housing agency?
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
             This determines your trash pickup schedule.
           </p>
         </div>
@@ -217,7 +239,8 @@ export default function OnboardingScreen() {
           ))}
           <button
             onClick={() => setStep("select-village")}
-            className="w-full text-left px-5 py-4 rounded-2xl border border-dashed border-gray-300 text-gray-400 active:scale-95 transition-transform mt-2"
+            className="w-full text-left px-5 py-4 rounded-2xl border border-dashed border-gray-300 active:scale-95 transition-transform mt-2"
+            style={{ color: "var(--color-text-muted)" }}
           >
             Not sure yet
           </button>
@@ -226,24 +249,25 @@ export default function OnboardingScreen() {
     );
   }
 
-  // Select village (off-base flow, after agency)
+  // Select village
   if (step === "select-village") {
     return (
       <div
         className="min-h-screen flex flex-col px-6 py-12"
         style={{ backgroundColor: "var(--color-surface)" }}
       >
+        <button
+          onClick={() => setStep("select-agency")}
+          className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+        >
+          ← Back
+        </button>
+
         <div className="mb-8">
-          <button
-            onClick={() => setStep("select-agency")}
-            className="text-gray-400 text-sm mb-6 active:opacity-70"
-          >
-            ← Back
-          </button>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--color-text-primary)" }}>
             Which village are you in?
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
             Used for local info specific to your area.
           </p>
         </div>
@@ -256,12 +280,15 @@ export default function OnboardingScreen() {
               className="w-full text-left px-5 py-4 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
             >
               <span className="font-semibold text-gray-800">{village.name}</span>
-              <span className="ml-2 text-gray-400 text-sm">{village.nameJa}</span>
+              <span className="ml-2 text-sm" style={{ color: "var(--color-text-muted)" }}>
+                {village.nameJa}
+              </span>
             </button>
           ))}
           <button
             onClick={handleSkip}
-            className="w-full text-left px-5 py-4 rounded-2xl border border-dashed border-gray-300 text-gray-400 active:scale-95 transition-transform mt-2"
+            className="w-full text-left px-5 py-4 rounded-2xl border border-dashed border-gray-300 active:scale-95 transition-transform mt-2"
+            style={{ color: "var(--color-text-muted)" }}
           >
             Not sure yet
           </button>
@@ -270,7 +297,7 @@ export default function OnboardingScreen() {
     );
   }
 
-  // Temporary housing
+  // Temporary
   if (step === "temporary") {
     return (
       <div
@@ -278,11 +305,13 @@ export default function OnboardingScreen() {
         style={{ backgroundColor: "var(--color-surface)" }}
       >
         <p className="text-5xl mb-6">🏨</p>
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">No problem</h2>
-        <p className="text-gray-500 text-sm mb-2">
+        <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--color-text-primary)" }}>
+          No problem
+        </h2>
+        <p className="text-sm mb-2" style={{ color: "var(--color-text-secondary)" }}>
           You can update your housing details later in Settings once you're settled.
         </p>
-        <p className="text-gray-400 text-xs mb-10">
+        <p className="text-xs mb-10" style={{ color: "var(--color-text-muted)" }}>
           In the meantime, BaseLine has everything you need — emergency contacts, utilities setup, car info, and more.
         </p>
         <button

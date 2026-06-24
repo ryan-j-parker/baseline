@@ -76,67 +76,68 @@
     ]
   },
   {
-    "id": "internet",
-    "title": "Internet",
-    "icon": "📶",
-    "provider": "Multiple providers — Docomo Hikari, SoftBank, au Hikari",
-    "summary": "Home internet setup can take 2–4 weeks for a technician visit. Plan ahead.",
-    "contacts": [
-      {
-        "label": "Docomo English Support",
-        "number": "0120-005-250",
-        "note": "Toll-free. English support available."
-      },
-      {
-        "label": "SoftBank English Support",
-        "number": "0800-1111-820",
-        "note": "Toll-free. English support available."
-      }
-    ],
-    "steps": [
-      "Choose a provider — Docomo Hikari and SoftBank are most common for English support.",
-      "Call or visit a carrier store to sign up. Bring your passport and residence card.",
-      "Schedule a technician installation visit — expect 2–4 weeks wait time.",
-      "In the meantime, use your phone as a hotspot or purchase a pocket WiFi device.",
-      "Pocket WiFi is available at the airport or at carrier stores and works immediately."
-    ],
-    "tips": [
-      "Start this process on day one — the wait time catches many families off guard.",
-      "Pocket WiFi from IIJmio or Rakuten Mobile is a good stopgap.",
-      "Some bases have a waiting list for on-base internet — check with your housing office.",
-      "Many Okinawa Family Mart and 7-Eleven locations have free WiFi as a stopgap."
-    ]
-  },
-  {
-    "id": "phone",
-    "title": "Phone & SIM",
-    "icon": "📱",
-    "provider": "Docomo, SoftBank, au, Rakuten Mobile",
-    "summary": "Get a local SIM or phone plan as soon as possible. Your US plan will have expensive roaming charges.",
-    "contacts": [
-      {
-        "label": "Docomo English Support",
-        "number": "0120-005-250",
-        "note": "Toll-free. English support available."
-      },
-      {
-        "label": "Rakuten Mobile",
-        "number": "0800-600-0000",
-        "note": "Cheapest option. Unlimited data plan available."
-      }
-    ],
-    "steps": [
-      "Visit a carrier store with your passport and residence card (在留カード).",
-      "Choose a plan — Rakuten Mobile is cheapest, Docomo has best coverage island-wide.",
-      "Request an English-speaking staff member — most major stores have at least one.",
-      "You can keep your US number active on a secondary eSIM if your phone supports it.",
-      "SIM-only plans are available if you brought an unlocked phone from the US."
-    ],
-    "tips": [
-      "Docomo has the best rural and mountain coverage in Okinawa.",
-      "Rakuten Mobile is around ¥3,000/month unlimited — hard to beat.",
-      "Make sure your US phone is unlocked before you leave — AT&T and Verizon lock by default.",
-      "The AAFES on base sometimes carries SIM cards — check there first."
-    ]
-  }
+  "id": "internet",
+  "title": "Internet",
+  "icon": "📶",
+  "provider": "Multiple providers available — setup takes 2–4 weeks",
+  "summary": "Home internet in Japan requires a technician visit for installation. Start this process on day one — the wait catches most families off guard. You will be given a temporary solution in the meantime.",
+  "contacts": [
+    {
+      "label": "Ask your housing agency",
+      "number": "",
+      "note": "Many housing agencies have preferred ISP partners and can recommend or coordinate setup for you."
+    }
+  ],
+  "steps": [
+    "Contact your housing agency on move-in day and ask which internet providers serve your area.",
+    "Choose a provider and schedule a technician installation visit — expect 2–4 weeks wait time.",
+    "Most providers will loan you a Pocket WiFi device at signup to use while you wait for installation.",
+    "On installation day, be home — the technician needs access to your unit.",
+    "Bills are typically paid monthly by bank transfer or convenience store payment slip."
+  ],
+  "tips": [
+    "Start this process immediately — do not wait until you feel settled.",
+    "Pocket WiFi loaned by your ISP is a standard bridge solution. Ask about it at signup.",
+    "Your housing agency is your best first call — they deal with this process regularly and know which providers work in your area.",
+    "English support varies widely by provider. On-base SoftBank stores can help with questions in English.",
+    "Speeds and reliability vary by area and provider. Ask neighbors in your housing complex what they use.",
+    "Some providers require a Japanese bank account to set up automatic billing — sort this out early."
+  ]
+},
+{
+  "id": "phone",
+  "title": "Phone & SIM",
+  "icon": "📱",
+  "provider": "Options: keep US plan, add Japanese SIM, or switch carriers",
+  "summary": "You have several options depending on your phone, budget, and how long you plan to stay. Most families use a combination — keeping a US number active while adding Japanese data.",
+  "contacts": [
+    {
+      "label": "SoftBank — Kadena Exchange",
+      "number": "098-938-2521",
+      "note": "Inside the Kadena AB Exchange. English-speaking staff. Can set up plans, SIMs, and new devices."
+    },
+    {
+      "label": "SoftBank — Camp Foster Exchange",
+      "number": "098-893-2467",
+      "note": "Inside the Camp Foster Exchange. English-speaking staff."
+    }
+  ],
+  "steps": [
+    "Decide which option fits your situation — see Tips below for guidance.",
+    "If adding a Japanese SIM or plan, visit an on-base carrier store with your passport and residence card (在留カード).",
+    "If using eSIM, confirm your phone is unlocked and eSIM-compatible before visiting the store.",
+    "If keeping your US plan, contact your carrier before departure to confirm international coverage and pricing.",
+    "Test your setup as soon as possible — do not assume connectivity until you have confirmed it works on island."
+  ],
+  "tips": [
+    "Option 1 — Keep your US plan: Major US carriers offer international plans that include Japan. This is the lowest-friction option if you want to keep your US number active with minimal changes. Check current pricing with your carrier before departure.",
+    "Option 2 — Add a Japanese SIM or eSIM: If your phone is unlocked, you can add a Japanese data SIM or eSIM while keeping your US plan active on your primary SIM. This gives you a local number and often cheaper data. Newer iPhones support dual SIM via eSIM — one US, one Japanese.",
+    "Option 3 — Switch to a Japanese carrier: For longer tours, switching fully to a Japanese carrier can significantly reduce costs. Rakuten Mobile offers unlimited data at low monthly rates. Docomo has the best island-wide coverage including rural and northern areas.",
+    "On-base SoftBank stores at Kadena and Foster have English-speaking staff and experience with SOFA-status customers — a good starting point regardless of which option you choose.",
+    "Make sure your US phone is unlocked before you leave — some carriers lock devices by default. Contact your carrier to unlock before departure.",
+    "Your residence card (在留カード) is required to sign up for any Japanese phone plan. Get this sorted at base admin as soon as you arrive.",
+    "Convenience store SIM cards (available at 7-Eleven and Family Mart) are a quick stopgap for data-only use while you sort out a longer-term plan.",
+    "If you buy a new phone on island, Japanese models may not support all US LTE bands — check compatibility before purchasing."
+  ]
+}
 ]

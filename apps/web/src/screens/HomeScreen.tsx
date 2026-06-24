@@ -30,12 +30,17 @@ export default function HomeScreen() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-surface)" }}>
 
       {/* Header */}
-      <div className="px-5 pt-10 pb-4 relative" style={{ backgroundColor: "var(--color-brand)" }}>
-        <h1 className="text-2xl font-bold text-white">BaseLine</h1>
+      <div
+        className="px-5 pt-12 pb-5 relative"
+        style={{
+          background: "linear-gradient(135deg, var(--color-brand-dark) 0%, var(--color-brand) 100%)",
+        }}
+      >
+        <h1 className="text-2xl font-bold text-white tracking-tight">BaseLine</h1>
         <p className="mt-1 text-blue-200 text-sm">📍 {getLocationLabel()}</p>
 
         {/* Header actions */}
-        <div className="absolute right-5 top-10 flex gap-4">
+        <div className="absolute right-5 top-12 flex gap-4">
           <button
             onClick={() => navigate("/search")}
             className="text-white text-2xl active:opacity-70"
@@ -58,20 +63,28 @@ export default function HomeScreen() {
             key={tile.id}
             onClick={() => handleTileTap(tile)}
             className={`
-              flex flex-col items-start px-4 py-5 rounded-2xl shadow-sm
-              active:scale-95 transition-transform text-left
+              flex flex-col items-start px-4 py-5 rounded-2xl
+              active:scale-95 transition-all duration-150 text-left
               ${tile.id === "emergency"
-                ? "col-span-2 bg-red-600 text-white"
+                ? "col-span-2 shadow-lg shadow-red-200"
                 : tile.isLive
-                  ? "bg-white text-gray-800"
-                  : "bg-white text-gray-300"
+                  ? "shadow-sm hover:shadow-md"
+                  : "opacity-60"
               }
             `}
+            style={{
+              backgroundColor: tile.id === "emergency"
+                ? "var(--color-danger)"
+                : "var(--color-surface-card)",
+              color: tile.id === "emergency" ? "white" : "var(--color-text-primary)",
+            }}
           >
-            <span className="text-3xl mb-2">{tile.icon}</span>
-            <span className="font-semibold text-base">{tile.title}</span>
+            <span className="text-3xl mb-3">{tile.icon}</span>
+            <span className="font-semibold text-sm leading-tight">{tile.title}</span>
             {!tile.isLive && tile.id !== "emergency" && (
-              <span className="text-xs mt-1 text-gray-300">Coming soon</span>
+              <span className="text-xs mt-1" style={{ color: "var(--color-text-muted)" }}>
+                Coming soon
+              </span>
             )}
           </button>
         ))}
