@@ -37,7 +37,11 @@ export default function MedicalScreen() {
 
       {/* Header */}
       <div className="px-5 pt-10 pb-4" style={{ backgroundColor: "var(--color-brand)" }}>
-        <button onClick={() => navigate("/")} className="text-blue-200 text-sm mb-2 active:opacity-70">
+        <button
+          onClick={() => navigate("/")}
+          className="text-blue-200 text-sm mb-2 active:opacity-70"
+          aria-label="Go back"
+        >
           ← Back
         </button>
         <h1 className="text-2xl font-bold text-white">Medical</h1>
@@ -45,11 +49,18 @@ export default function MedicalScreen() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-2 px-4 py-3 overflow-x-auto">
+      <div
+        className="flex gap-2 px-4 py-3 overflow-x-auto"
+        role="tablist"
+        aria-label="Medical categories"
+      >
         {medicalData.map((m) => (
           <button
             key={m.id}
             onClick={() => setActiveId(m.id)}
+            role="tab"
+            aria-selected={activeId === m.id}
+            aria-controls={`tabpanel-${m.id}`}
             className={`
               whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors
               ${activeId === m.id
@@ -59,13 +70,18 @@ export default function MedicalScreen() {
             `}
             style={activeId === m.id ? { backgroundColor: "var(--color-brand)" } : {}}
           >
-            {m.icon} {m.title}
+            <span aria-hidden="true">{m.icon}</span>{" "}{m.title}
           </button>
         ))}
       </div>
 
       {/* Content */}
-      <div className="px-4 pb-12 flex flex-col gap-6">
+      <div
+        id={`tabpanel-${activeId}`}
+        role="tabpanel"
+        aria-label={active.title}
+        className="px-4 pb-12 flex flex-col gap-6"
+      >
         {active.sections.map((section, si) => (
           <div key={si} className="flex flex-col gap-3">
 
@@ -77,12 +93,14 @@ export default function MedicalScreen() {
 
             {/* Contacts */}
             {section.contacts.filter((c) => c.number).length > 0 && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2" role="list">
                 {section.contacts.filter((c) => c.number).map((contact, i) => (
                   <button
                     key={i}
                     onClick={() => handleCall(contact.number)}
                     className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm text-left active:scale-95 transition-transform"
+                    aria-label={`Call ${contact.label} at ${contact.number}`}
+                    role="listitem"
                   >
                     <div className="flex justify-between items-start">
                       <div className="flex-1 pr-3">
@@ -91,7 +109,11 @@ export default function MedicalScreen() {
                           <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
                         )}
                       </div>
-                      <span className="text-sm font-bold shrink-0" style={{ color: "var(--color-brand)" }}>
+                      <span
+                        className="text-sm font-bold shrink-0"
+                        style={{ color: "var(--color-brand)" }}
+                        aria-hidden="true"
+                      >
                         {contact.number}
                       </span>
                     </div>
@@ -102,10 +124,11 @@ export default function MedicalScreen() {
 
             {/* Non-callable contacts (websites, chains) */}
             {section.contacts.filter((c) => !c.number && c.label).length > 0 && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2" role="list">
                 {section.contacts.filter((c) => !c.number).map((contact, i) => (
                   <div
                     key={i}
+                    role="listitem"
                     className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm"
                   >
                     <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
@@ -119,12 +142,12 @@ export default function MedicalScreen() {
 
             {/* Tips */}
             {section.tips && section.tips.length > 0 && (
-              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
+              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4" role="note">
                 <p className="text-xs text-amber-600 uppercase tracking-wide mb-3">Tips</p>
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col gap-2" aria-label="Tips">
                   {section.tips.map((tip, i) => (
                     <li key={i} className="flex gap-2 items-start">
-                      <span className="text-amber-400 mt-0.5">💡</span>
+                      <span className="text-amber-400 mt-0.5" aria-hidden="true">💡</span>
                       <span className="text-gray-700 text-sm">{tip}</span>
                     </li>
                   ))}

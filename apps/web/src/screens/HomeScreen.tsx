@@ -44,12 +44,16 @@ export default function HomeScreen() {
           <button
             onClick={() => navigate("/search")}
             className="text-white text-2xl active:opacity-70"
+            aria-label="Search"
+            aria-hidden="true"
           >
             🔍
           </button>
           <button
             onClick={() => navigate("/settings")}
             className="text-white text-2xl active:opacity-70"
+            aria-label="Settings"
+            aria-hidden="true"
           >
             ⚙️
           </button>
@@ -79,7 +83,9 @@ export default function HomeScreen() {
               color: tile.id === "emergency" ? "white" : "var(--color-text-primary)",
             }}
           >
-            <span className="text-3xl mb-3">{tile.icon}</span>
+            <span className="text-3xl mb-3" aria-hidden="true">
+              {tile.icon}
+            </span>
             <span className="font-semibold text-sm leading-tight">{tile.title}</span>
             {!tile.isLive && tile.id !== "emergency" && (
               <span className="text-xs mt-1" style={{ color: "var(--color-text-muted)" }}>

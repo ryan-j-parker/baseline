@@ -103,6 +103,7 @@ export default function OnboardingScreen() {
         <button
           onClick={() => setStep("welcome")}
           className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+          aria-label="Go back"
         >
           ← Back
         </button>
@@ -116,12 +117,15 @@ export default function OnboardingScreen() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3" role="list">
           <button
             onClick={() => handleHousingStatus("off-base")}
             className="w-full text-left px-5 py-5 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
+            role="listitem"
           >
-            <p className="font-semibold text-gray-800 text-base">🏠 Yes — I'm off base</p>
+            <p className="font-semibold text-gray-800 text-base">
+              <span aria-hidden="true">🏠</span>{" "}Yes — I'm off base
+            </p>
             <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
               Living in a local housing agency property
             </p>
@@ -130,8 +134,11 @@ export default function OnboardingScreen() {
           <button
             onClick={() => handleHousingStatus("on-base")}
             className="w-full text-left px-5 py-5 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
+            role="listitem"
           >
-            <p className="font-semibold text-gray-800 text-base">🪖 Yes — I'm on base</p>
+            <p className="font-semibold text-gray-800 text-base">
+              <span aria-hidden="true">🪖</span>{" "}Yes — I'm on base
+            </p>
             <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
               Living in base housing
             </p>
@@ -140,8 +147,11 @@ export default function OnboardingScreen() {
           <button
             onClick={() => handleHousingStatus("temporary")}
             className="w-full text-left px-5 py-5 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
+            role="listitem"
           >
-            <p className="font-semibold text-gray-800 text-base">🏨 Not yet</p>
+            <p className="font-semibold text-gray-800 text-base">
+              <span aria-hidden="true">🏨</span>{" "}Not yet
+            </p>
             <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
               Still in a hotel or temporary lodging
             </p>
@@ -169,6 +179,7 @@ export default function OnboardingScreen() {
         <button
           onClick={() => setStep("housing-status")}
           className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+          aria-label="Go back"
         >
           ← Back
         </button>
@@ -182,12 +193,13 @@ export default function OnboardingScreen() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3" role="list">
           {BASES.map((base) => (
             <button
               key={base.id}
               onClick={() => handleBaseSelect(base.id)}
               className="w-full text-left px-5 py-4 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
+              role="listitem"
             >
               <p className="font-semibold text-gray-800">{base.name}</p>
             </button>
@@ -214,6 +226,7 @@ export default function OnboardingScreen() {
         <button
           onClick={() => setStep("housing-status")}
           className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+          aria-label="Go back"
         >
           ← Back
         </button>
@@ -227,12 +240,14 @@ export default function OnboardingScreen() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2" role="list">
           {HOUSING_AGENCIES.map((agency) => (
             <button
               key={agency.id}
               onClick={() => handleAgencySelect(agency.id)}
               className="w-full text-left px-5 py-4 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
+              aria-label={`Select ${agency.name}, phone ${agency.phone}`}
+              role="listitem"
             >
               <p className="font-semibold text-gray-800">{agency.name}</p>
               <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
@@ -262,6 +277,7 @@ export default function OnboardingScreen() {
         <button
           onClick={() => setStep("select-agency")}
           className="text-gray-400 text-sm mb-8 active:opacity-70 text-left"
+          aria-label="Go back"
         >
           ← Back
         </button>
@@ -275,12 +291,14 @@ export default function OnboardingScreen() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3" role="list">
           {VILLAGES.map((village) => (
             <button
               key={village.id}
               onClick={() => handleVillageSelect(village.id)}
               className="w-full text-left px-5 py-4 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
+              aria-label={`Select ${village.name}`}
+              role="listitem"
             >
               <span className="font-semibold text-gray-800">{village.name}</span>
               <span className="ml-2 text-sm" style={{ color: "var(--color-text-muted)" }}>
@@ -307,7 +325,7 @@ export default function OnboardingScreen() {
         className="min-h-screen flex flex-col items-center justify-center px-6 text-center"
         style={{ backgroundColor: "var(--color-surface)" }}
       >
-        <p className="text-5xl mb-6">🏨</p>
+        <p className="text-5xl mb-6" aria-hidden="true">🏨</p>
         <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--color-text-primary)" }}>
           No problem
         </h2>
