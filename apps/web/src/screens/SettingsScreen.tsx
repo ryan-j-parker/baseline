@@ -15,11 +15,29 @@ export default function SettingsScreen() {
 
   const { user, signOut } = useAuthStore();
 
+  const agencyDetails = HOUSING_AGENCIES.find((a) => a.id === housingAgency);
+  const baseDetails = BASES.find((b) => b.id === baseId);
+  const villageDetails = VILLAGES.find((v) => v.id === villageId);
+
+  function handleCall(phone: string) {
+    const digits = phone.replace(/[^0-9]/g, "");
+    if (digits.startsWith("0")) {
+      window.location.href = `tel:+81${digits.slice(1)}`;
+    } else {
+      window.location.href = `tel:${digits}`;
+    }
+  }
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-surface)" }}>
 
       {/* Header */}
-      <div className="px-5 pt-10 pb-4" style={{ backgroundColor: "var(--color-brand)" }}>
+      <div
+        className="px-5 pt-12 pb-5"
+        style={{
+          background: "linear-gradient(135deg, var(--color-brand-dark) 0%, var(--color-brand) 100%)",
+        }}
+      >
         <button onClick={() => navigate("/")} className="text-blue-200 text-sm mb-2 active:opacity-70">
           ← Back
         </button>
@@ -31,8 +49,9 @@ export default function SettingsScreen() {
 
         {/* Setup */}
         <div>
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-2 px-1">Setup</p>
+          <p className="text-xs text-gray-400 uppercase tracking-wide mb-2 px-1">Your Setup</p>
           <div className="bg-white rounded-2xl px-5 py-4 shadow-sm flex flex-col gap-3">
+
             <div className="flex justify-between items-center">
               <span className="text-gray-600 text-sm">Housing</span>
               <span className="text-gray-800 font-medium text-sm capitalize">
@@ -40,29 +59,41 @@ export default function SettingsScreen() {
               </span>
             </div>
 
-            {housingType === "off-base" && housingAgency && (
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600 text-sm">Agency</span>
-                <span className="text-gray-800 font-medium text-sm">
-                  {HOUSING_AGENCIES.find((a) => a.id === housingAgency)?.name ?? housingAgency}
-                </span>
-              </div>
+            {housingType === "off-base" && agencyDetails && (
+              <>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 text-sm">Agency</span>
+                  <span className="text-gray-800 font-medium text-sm">
+                    {agencyDetails.name}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 text-sm">Agency phone</span>
+                  <button
+                    onClick={() => handleCall(agencyDetails.phone)}
+                    className="font-medium text-sm active:opacity-70"
+                    style={{ color: "var(--color-brand)" }}
+                  >
+                    {agencyDetails.phone}
+                  </button>
+                </div>
+              </>
             )}
 
-            {housingType === "on-base" && baseId && (
+            {housingType === "on-base" && baseDetails && (
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 text-sm">Base</span>
                 <span className="text-gray-800 font-medium text-sm">
-                  {BASES.find((b) => b.id === baseId)?.name ?? baseId}
+                  {baseDetails.name}
                 </span>
               </div>
             )}
 
-            {villageId && (
+            {villageDetails && (
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 text-sm">Village</span>
                 <span className="text-gray-800 font-medium text-sm">
-                  {VILLAGES.find((v) => v.id === villageId)?.name ?? villageId}
+                  {villageDetails.name}
                 </span>
               </div>
             )}
@@ -72,7 +103,7 @@ export default function SettingsScreen() {
                 resetOnboarding();
                 navigate("/onboarding");
               }}
-              className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 text-sm font-medium active:scale-95 transition-transform"
+              className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 text-sm font-medium active:scale-95 transition-transform mt-1"
             >
               Update Housing Setup
             </button>

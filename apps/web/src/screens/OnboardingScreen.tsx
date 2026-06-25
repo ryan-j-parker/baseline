@@ -235,6 +235,9 @@ export default function OnboardingScreen() {
               className="w-full text-left px-5 py-4 rounded-2xl bg-white border border-gray-200 shadow-sm active:scale-95 transition-transform"
             >
               <p className="font-semibold text-gray-800">{agency.name}</p>
+              <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
+                {agency.phone}
+              </p>
             </button>
           ))}
           <button
