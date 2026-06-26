@@ -61,33 +61,33 @@ export default function EmergencyScreen() {
               <span aria-hidden="true">{CATEGORY_ICONS[section.category]}</span>{" "}
               {section.title}
             </h2>
-            <div className="flex flex-col gap-2" role="list">
+            <ul className="flex flex-col gap-2">
               {section.contacts.map((contact, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleCall(contact.number)}
-                  className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm text-left active:scale-95 transition-transform"
-                  aria-label={`Call ${contact.label} at ${contact.number}`}
-                  role="listitem"
-                >
-                  <div className="flex justify-between items-start">
-                    <div className="flex-1 pr-3">
-                      <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
-                      {contact.note && (
-                        <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
-                      )}
+                <li key={i}>
+                  <button
+                    onClick={() => handleCall(contact.number)}
+                    className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm text-left active:scale-95 transition-transform"
+                    aria-label={`Call ${contact.label} at ${contact.number}`}
+                  >
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1 pr-3">
+                        <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
+                        {contact.note && (
+                          <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
+                        )}
+                      </div>
+                      <span
+                        className="text-sm font-bold shrink-0"
+                        style={{ color: "var(--color-brand)" }}
+                        aria-hidden="true"
+                      >
+                        {contact.number}
+                      </span>
                     </div>
-                    <span
-                      className="text-sm font-bold shrink-0"
-                      style={{ color: "var(--color-brand)" }}
-                      aria-hidden="true"
-                    >
-                      {contact.number}
-                    </span>
-                  </div>
-                </button>
+                  </button>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

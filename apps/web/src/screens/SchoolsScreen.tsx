@@ -106,55 +106,54 @@ export default function SchoolsScreen() {
 
             {/* Contacts */}
             {section.contacts.filter((c) => c.number).length > 0 && (
-              <div className="flex flex-col gap-2" role="list">
+              <ul className="flex flex-col gap-2">
                 {section.contacts.filter((c) => c.number).map((contact, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleContact(contact.number)}
-                    className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm text-left active:scale-95 transition-transform"
-                    aria-label={
-                      contact.number.startsWith("http")
-                        ? `Visit ${contact.label}`
-                        : `Call ${contact.label} at ${contact.number}`
-                    }
-                    role="listitem"
-                  >
-                    <div className="flex justify-between items-start">
-                      <div className="flex-1 pr-3">
-                        <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
-                        {contact.note && (
-                          <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
-                        )}
+                  <li key={i}>
+                    <button
+                      onClick={() => handleContact(contact.number)}
+                      className="w-full bg-white rounded-2xl px-4 py-4 shadow-sm text-left active:scale-95 transition-transform"
+                      aria-label={
+                        contact.number.startsWith("http")
+                          ? `Visit ${contact.label}`
+                          : `Call ${contact.label} at ${contact.number}`
+                      }
+                    >
+                      <div className="flex justify-between items-start">
+                        <div className="flex-1 pr-3">
+                          <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
+                          {contact.note && (
+                            <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
+                          )}
+                        </div>
+                        <span
+                          className="text-sm font-bold shrink-0"
+                          style={{ color: "var(--color-brand)" }}
+                          aria-hidden="true"
+                        >
+                          {contact.number.startsWith("http") ? "↗" : contact.number}
+                        </span>
                       </div>
-                      <span
-                        className="text-sm font-bold shrink-0"
-                        style={{ color: "var(--color-brand)" }}
-                        aria-hidden="true"
-                      >
-                        {contact.number.startsWith("http") ? "↗" : contact.number}
-                      </span>
-                    </div>
-                  </button>
+                    </button>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
 
             {/* Non-callable contacts */}
             {section.contacts.filter((c) => !c.number && c.label).length > 0 && (
-              <div className="flex flex-col gap-2" role="list">
+              <ul className="flex flex-col gap-2">
                 {section.contacts.filter((c) => !c.number).map((contact, i) => (
-                  <div
+                  <li
                     key={i}
-                    role="listitem"
                     className="bg-white rounded-2xl px-4 py-4 shadow-sm"
                   >
                     <p className="font-semibold text-gray-800 text-sm">{contact.label}</p>
                     {contact.note && (
                       <p className="text-gray-400 text-xs mt-1">{contact.note}</p>
                     )}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
 
             {/* Steps */}
