@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserPrefsStore } from "../stores/useUserPrefsStore";
 import { getSuggestedQuestions } from "../lib/suggestedQuestions";
@@ -11,14 +11,46 @@ type Message = {
 
 function renderContent(text: string) {
   return text.split("\n").map((line, j) => {
-    const parts = line.split(/\*\*(.*?)\*\*/g);
-    return (
-      <p key={j} className={line === "" ? "mt-2" : "mb-1"}>
-        {parts.map((part, k) =>
-          k % 2 === 1 ? <strong key={k}>{part}</strong> : part
-        )}
-      </p>
-    );
+    if (line.startsWith("# ")) {
+      return <p key={j} className="font-bold text-base mb-1">{line.slice(2)}</p>;
+    }
+    if (line.startsWith("## ")) {
+      return <p key={j} className="font-semibold mb-1">{line.slice(3)}</p>;
+    }
+
+    const segments = line.split(/(\*\*.*?\*\*|0\d{2}-\d{3,4}-\d{4}|https?:\/\/[^\s)]+)/g);
+
+    const rendered = segments.map((segment, k): React.ReactNode => {
+      if (segment.startsWith("**") && segment.endsWith("**")) {
+        return React.createElement("strong", { key: k }, segment.slice(2, -2));
+      }
+      if (/^0\d{2}-\d{3,4}-\d{4}$/.test(segment)) {
+        const digits = segment.replace(/[^0-9]/g, "");
+        return React.createElement(
+          "a",
+          { key: k, href: `tel:+81${digits.slice(1)}`, className: "font-semibold underline", style: { color: "var(--color-brand)" } },
+          segment
+        );
+      }
+      if (/^1-\d{3}-\d{3}-\d{4}$/.test(segment)) {
+        return React.createElement(
+          "a",
+          { key: k, href: `tel:${segment.replace(/[^0-9]/g, "")}`, className: "font-semibold underline", style: { color: "var(--color-brand)" } },
+          segment
+        );
+      }
+      if (/^https?:\/\//.test(segment)) {
+        const display = segment.replace(/^https?:\/\//, "").replace(/\/$/, "");
+        return React.createElement(
+          "a",
+          { key: k, href: segment, target: "_blank", rel: "noopener noreferrer", className: "underline break-all", style: { color: "var(--color-brand)" } },
+          display
+        );
+      }
+      return React.createElement("span", { key: k }, segment);
+    });
+
+    return <p key={j} className={line === "" ? "mt-2" : "mb-1"}>{rendered}</p>;
   });
 }
 
@@ -62,10 +94,13 @@ ${context}
 Guidelines:
 - Keep answers concise and actionable
 - Use bullet points for lists of steps or items
-- If you mention a phone number, format it clearly
-- If you don't know something specific, say so honestly
+- Format phone numbers clearly (e.g. 098-983-7811)
+- Format URLs as plain text without markdown (e.g. en.unitedhousing.co.jp not [text](url))
+- Do not use markdown headers (# or ##) — use plain bold text for section labels instead
 - Never make up specific details like phone numbers or dates
-- Always consider the user's housing situation when relevant`;
+- Always consider the user's housing situation when relevant
+- If the user asks about a housing agency that is not their own, provide information for BOTH their actual agency (labelled "Your agency") AND the requested agency (labelled "Also requested") — do not correct or question why they are asking, just provide both
+- When showing agency info, always include: name, phone number, and website on separate lines`;
 
     try {
       const response = await fetch("/api/ask", {
@@ -89,7 +124,10 @@ Guidelines:
     } catch {
       setMessages([
         ...newMessages,
-        { role: "assistant", content: "Something went wrong. Please check your connection and try again." },
+        {
+          role: "assistant",
+          content: "Something went wrong. Please check your connection and try again.",
+        },
       ]);
     } finally {
       setLoading(false);
@@ -164,7 +202,7 @@ Guidelines:
             className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
           >
             <div
-              className={`max-w-xs px-4 py-3 rounded-2xl text-sm leading-relaxed ${
+              className={`max-w-sm px-4 py-3 rounded-2xl text-sm leading-relaxed ${
                 msg.role === "user"
                   ? "text-white rounded-br-sm"
                   : "bg-white text-gray-800 shadow-sm rounded-bl-sm"
