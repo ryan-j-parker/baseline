@@ -1,18 +1,22 @@
 import Anthropic from "@anthropic-ai/sdk";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(req: Request): Promise<Response> {
+const client = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+export default async function handler(
+  req: VercelRequest,
+  res: VercelResponse
+) {
   if (req.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const client = new Anthropic({
-      apiKey: process.env.ANTHROPIC_API_KEY,
-    });
-
-    const { messages, systemPrompt } = await req.json() as {
-    messages: { role: "user" | "assistant"; content: string }[];
-    systemPrompt: string;
+    const { messages, systemPrompt } = req.body as {
+      messages: { role: "user" | "assistant"; content: string }[];
+      systemPrompt: string;
     };
 
     const response = await client.messages.create({
@@ -26,18 +30,9 @@ export default async function handler(req: Request): Promise<Response> {
       ? response.content[0].text
       : "Sorry, I couldn't get an answer.";
 
-    return new Response(JSON.stringify({ text }), {
-      headers: { "Content-Type": "application/json" },
-    });
+    return res.status(200).json({ text });
   } catch (error) {
     console.error("API error:", error);
-    return new Response(
-      JSON.stringify({ error: "Failed to get answer" }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
+    return res.status(500).json({ error: "Failed to get answer" });
   }
 }
-
-export const config = {
-  runtime: "edge",
-};
