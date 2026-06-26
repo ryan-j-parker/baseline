@@ -23,6 +23,7 @@ import AuthCallbackScreen from "./screens/AuthCallbackScreen";
 import ScrollToTop from "./components/ScrollToTop";
 import ProfileScreen from "./screens/ProfileScreen";
 import OnboardingScreen from "./screens/OnboardingScreen";
+import InstantAnswersScreen from "./screens/InstantAnswersScreen";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 1000 * 60 * 60 * 24 } },
@@ -73,6 +74,7 @@ function AppRoutes() {
         <Route path="/auth/callback" element={<AuthCallbackScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="*" element={<NotFoundScreen />} />
+        <Route path="/instant-answers" element={<InstantAnswersScreen />} />
       </Routes>
     </>
   );
