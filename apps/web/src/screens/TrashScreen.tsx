@@ -97,7 +97,9 @@ export default function TrashScreen() {
                 `}
                 style={activeCategory === cat ? { backgroundColor: "var(--color-brand)" } : {}}
               >
-                <span aria-hidden="true">{CATEGORY_LABELS[cat].split(" ")[0]}</span>
+                <span aria-hidden="true">
+                    {CATEGORY_LABELS[cat] ? CATEGORY_LABELS[cat].split(" ")[0] : ""}
+                </span>
                 {" "}{CATEGORY_LABELS_TEXT[cat]}
               </button>
             ))}
