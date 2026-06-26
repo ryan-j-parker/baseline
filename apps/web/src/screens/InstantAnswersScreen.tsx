@@ -55,24 +55,22 @@ Guidelines:
 - Always consider the user's housing situation when relevant`;
 
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 1000,
-          system: systemPrompt,
-          messages: newMessages.map((m) => ({
-            role: m.role,
-            content: m.content,
-          })),
-        }),
-      });
+      const response = await fetch("/api/ask", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    systemPrompt,
+    messages: newMessages.map((m) => ({
+      role: m.role,
+      content: m.content,
+    })),
+  }),
+});
 
-      const data = await response.json();
-      const reply = data.content?.[0]?.text ?? "Sorry, I couldn't get an answer. Please try again.";
+const data = await response.json();
+const reply = data.text ?? "Sorry, I couldn't get an answer. Please try again.";
 
       setMessages([...newMessages, { role: "assistant", content: reply }]);
     } catch {

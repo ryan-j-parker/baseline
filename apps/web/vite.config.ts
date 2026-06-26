@@ -56,6 +56,14 @@ const viteConfig = defineConfig({
       },
     }),
   ],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@baseline/core": path.resolve(__dirname, "../../packages/core/src/index.ts"),
