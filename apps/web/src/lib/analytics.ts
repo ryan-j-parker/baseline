@@ -1,32 +1,25 @@
-import Plausible from "plausible-tracker";
-
 // Initialize — domain will be your Vercel URL or custom domain
-// In dev mode this does nothing, only fires in production
 const isProd = import.meta.env.PROD;
 
-const plausible = isProd
-  ? Plausible({
-      domain: "onisland.io",
-      trackLocalhost: false,
-    })
-  : null;
-
-// Track page views manually (called on route changes)
-export function trackPageView(url?: string) {
-  if (!plausible) return;
-  plausible.trackPageview({ url });
+// Track page views — handled automatically by the script tag
+export function trackPageView(_url?: string) {
+  // Handled by Plausible script tag automatically
 }
 
-// Track custom events
+// Track custom events via Plausible's global function
 export function trackEvent(
   name: string,
   props?: Record<string, string | number | boolean>
 ) {
-  if (!plausible) return;
-  plausible.trackEvent(name, { props });
+  if (!isProd) return;
+  if (typeof window === "undefined") return;
+  // @ts-ignore
+  if (typeof window.plausible === "function") {
+    // @ts-ignore
+    window.plausible(name, { props });
+  }
 }
 
-// Pre-defined events for BaseLine
 export const Analytics = {
   villageSelected: (villageId: string) =>
     trackEvent("Village Selected", { village: villageId }),
