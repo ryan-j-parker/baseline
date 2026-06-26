@@ -9,6 +9,19 @@ type Message = {
   content: string;
 };
 
+function renderContent(text: string) {
+  return text.split("\n").map((line, j) => {
+    const parts = line.split(/\*\*(.*?)\*\*/g);
+    return (
+      <p key={j} className={line === "" ? "mt-2" : "mb-1"}>
+        {parts.map((part, k) =>
+          k % 2 === 1 ? <strong key={k}>{part}</strong> : part
+        )}
+      </p>
+    );
+  });
+}
+
 export default function InstantAnswersScreen() {
   const navigate = useNavigate();
   const { housingType, housingAgency, baseId, villageId } = useUserPrefsStore();
@@ -56,21 +69,21 @@ Guidelines:
 
     try {
       const response = await fetch("/api/ask", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    systemPrompt,
-    messages: newMessages.map((m) => ({
-      role: m.role,
-      content: m.content,
-    })),
-  }),
-});
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          systemPrompt,
+          messages: newMessages.map((m) => ({
+            role: m.role,
+            content: m.content,
+          })),
+        }),
+      });
 
-const data = await response.json();
-const reply = data.text ?? "Sorry, I couldn't get an answer. Please try again.";
+      const data = await response.json();
+      const reply = data.text ?? "Sorry, I couldn't get an answer. Please try again.";
 
       setMessages([...newMessages, { role: "assistant", content: reply }]);
     } catch {
@@ -120,25 +133,27 @@ const reply = data.text ?? "Sorry, I couldn't get an answer. Please try again.";
             </div>
 
             {/* Suggested questions */}
-            <div className="flex flex-col gap-2" role="list">
+            <ul className="flex flex-col gap-2">
               {suggested.map((q, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleAsk(q)}
-                  className="w-full text-left px-4 py-4 bg-white rounded-2xl shadow-sm border border-gray-100 active:scale-95 transition-transform"
-                  role="listitem"
-                >
-                  <span className="text-gray-800 text-sm font-medium">{q}</span>
-                </button>
+                <li key={i}>
+                  <button
+                    onClick={() => handleAsk(q)}
+                    className="w-full text-left px-4 py-4 bg-white rounded-2xl shadow-sm border border-gray-100 active:scale-95 transition-transform"
+                  >
+                    <span className="text-gray-800 text-sm font-medium">{q}</span>
+                  </button>
+                </li>
               ))}
-              <button
-                onClick={() => setShowInput(true)}
-                className="w-full text-left px-4 py-4 rounded-2xl border border-dashed border-gray-300 active:scale-95 transition-transform"
-                style={{ color: "var(--color-text-muted)" }}
-              >
-                <span className="text-sm">Something else...</span>
-              </button>
-            </div>
+              <li>
+                <button
+                  onClick={() => setShowInput(true)}
+                  className="w-full text-left px-4 py-4 rounded-2xl border border-dashed border-gray-300 active:scale-95 transition-transform"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
+                  <span className="text-sm">Something else...</span>
+                </button>
+              </li>
+            </ul>
           </div>
         )}
 
@@ -160,11 +175,7 @@ const reply = data.text ?? "Sorry, I couldn't get an answer. Please try again.";
                   : {}
               }
             >
-              {msg.content.split("\n").map((line, j) => (
-                <p key={j} className={line === "" ? "mt-2" : ""}>
-                  {line}
-                </p>
-              ))}
+              {renderContent(msg.content)}
             </div>
           </div>
         ))}
@@ -174,15 +185,24 @@ const reply = data.text ?? "Sorry, I couldn't get an answer. Please try again.";
           <div className="flex justify-start">
             <div className="bg-white px-4 py-3 rounded-2xl shadow-sm rounded-bl-sm">
               <div className="flex gap-1 items-center">
-                <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: "var(--color-brand)", animationDelay: "0ms" }} />
-                <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: "var(--color-brand)", animationDelay: "150ms" }} />
-                <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: "var(--color-brand)", animationDelay: "300ms" }} />
+                <span
+                  className="w-2 h-2 rounded-full animate-bounce"
+                  style={{ backgroundColor: "var(--color-brand)", animationDelay: "0ms" }}
+                />
+                <span
+                  className="w-2 h-2 rounded-full animate-bounce"
+                  style={{ backgroundColor: "var(--color-brand)", animationDelay: "150ms" }}
+                />
+                <span
+                  className="w-2 h-2 rounded-full animate-bounce"
+                  style={{ backgroundColor: "var(--color-brand)", animationDelay: "300ms" }}
+                />
               </div>
             </div>
           </div>
         )}
 
-        {/* Follow-up suggestions after first answer */}
+        {/* Follow-up after first answer */}
         {messages.length >= 2 && !loading && (
           <div className="flex flex-col gap-2 mt-2">
             <button
