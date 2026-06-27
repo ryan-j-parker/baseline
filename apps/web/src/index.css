@@ -55,11 +55,9 @@ html, body {
 @media (min-width: 768px) {
   html, body {
     background-color: #D1D5DB;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 0;
     min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
   }
 
   #root {
