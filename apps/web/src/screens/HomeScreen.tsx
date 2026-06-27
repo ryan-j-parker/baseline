@@ -61,7 +61,7 @@ export default function HomeScreen() {
       </div>
 
       {/* Tile grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 p-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 p-4 pb-12">
         {HOME_TILES.sort((a, b) => a.priority - b.priority).map((tile) => (
           <button
             key={tile.id}
